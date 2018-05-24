@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MoodleStudiepad
+namespace MoodleStudiepad.GUI
 {
     public partial class Login : Form
     {
