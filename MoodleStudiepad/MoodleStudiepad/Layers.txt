@@ -1,0 +1,6 @@
+﻿Five layers.
+	- UI: user interface. The Forms, Reports, everything visual.
+	- CC: control class. The link between UI and code/domain layer.
+	- BU: business. The business logic/domain layer, includes most of the code (?).
+	- DAL: data access layer. Gives access to the DB via code.
+	- DB: database. Datastorage.
