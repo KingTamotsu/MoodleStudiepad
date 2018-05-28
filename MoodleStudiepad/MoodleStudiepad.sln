@@ -3,13 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "MoodleStudiepad\GUI.csproj", "{DB2BE321-8F68-4F1E-9A64-CA0C718F0CFC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CC", "CC\CC.csproj", "{CB35BF32-ED91-46D8-B2E1-FEFADDD6003F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BU", "BU\BU.csproj", "{E3FFFF00-73E6-4CA5-852A-6C03B2E0EAFA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{65DF8D24-6C73-4D82-8690-8D914A401092}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoodleStudiepad", "MoodleStudiepad\MoodleStudiepad.csproj", "{DB2BE321-8F68-4F1E-9A64-CA0C718F0CFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,18 +15,6 @@ Global
 		{DB2BE321-8F68-4F1E-9A64-CA0C718F0CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB2BE321-8F68-4F1E-9A64-CA0C718F0CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB2BE321-8F68-4F1E-9A64-CA0C718F0CFC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CB35BF32-ED91-46D8-B2E1-FEFADDD6003F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CB35BF32-ED91-46D8-B2E1-FEFADDD6003F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CB35BF32-ED91-46D8-B2E1-FEFADDD6003F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CB35BF32-ED91-46D8-B2E1-FEFADDD6003F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E3FFFF00-73E6-4CA5-852A-6C03B2E0EAFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E3FFFF00-73E6-4CA5-852A-6C03B2E0EAFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E3FFFF00-73E6-4CA5-852A-6C03B2E0EAFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E3FFFF00-73E6-4CA5-852A-6C03B2E0EAFA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{65DF8D24-6C73-4D82-8690-8D914A401092}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{65DF8D24-6C73-4D82-8690-8D914A401092}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{65DF8D24-6C73-4D82-8690-8D914A401092}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{65DF8D24-6C73-4D82-8690-8D914A401092}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
