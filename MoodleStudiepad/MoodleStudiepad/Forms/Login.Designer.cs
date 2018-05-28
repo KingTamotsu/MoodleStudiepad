@@ -1,4 +1,4 @@
-﻿namespace MoodleStudiepad
+﻿namespace MoodleStudiepad.GUI
 {
     partial class Login
     {
