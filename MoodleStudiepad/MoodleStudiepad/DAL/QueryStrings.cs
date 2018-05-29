@@ -11,9 +11,11 @@ namespace MoodleStudiepad.DAL {
 
 
         #region SelectQuerries
-        
-        public List<UserAccount> selectSingleUser(string table, string username) {
-            List<UserAccount> readerList = getSingleUserReader(new SqlCommand("Select *" + " FROM " + table + " INNER JOIN Roles ON UserAccount.roleId = Roles.roleId" + " Where Username = '" + username + "'", base.conn));
+
+
+
+        public List<string> selectSingleUser(string table, string username) {
+            List<string> readerList = getsingleReader(new SqlCommand("Select *" + " FROM " + table + " INNER JOIN Roles ON UserAccount.roleId = Roles.roleId" + " Where Username = '" + username + "'", base.conn));
             return readerList;
         }
 

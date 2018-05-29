@@ -10,17 +10,14 @@ namespace MoodleStudiepad.BU
         private string username;
         private string password;
         private string role;
-        private List<UserAccount> user;
-
-
-        QueryStrings queryStrings = new QueryStrings();
-
+        private List<string> user;
 
         public bool checkUser(string username, string password) {
-            user = new List<UserAccount>();
+            QueryStrings queryStrings = new QueryStrings();
+            user = new List<string>();
             user = queryStrings.selectSingleUser(GetType().Name, username);
 
-            if (username == user[1].ToString() && password == user[2].ToString()) {
+            if (username == user[1] && password == user[2]) {
                 return true;
             } else {
                 return false;

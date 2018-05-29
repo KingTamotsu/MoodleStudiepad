@@ -12,8 +12,8 @@ using MoodleStudiepad.CC;
 
 namespace MoodleStudiepad
 {
-    public partial class Login : Form
-    {
+    public partial class Login : Form {
+        private bool checkUser;
         public Login()
         {
             InitializeComponent();
@@ -34,8 +34,14 @@ namespace MoodleStudiepad
             
             }
 
-            CheckUser checkUser = new CheckUser();
-            checkUser.checkUserOnLogin(tbUsername.Text, tbPassword.Text);
+            CheckUser checkUsername = new CheckUser();
+            checkUser = checkUsername.checkUserOnLogin(tbUsername.Text, tbPassword.Text);
+
+            if (checkUser) {
+                MessageBox.Show("You are succesfull logged in!");
+            } else {
+                MessageBox.Show("Wrong username or password");
+            }
         }
     }
 }
