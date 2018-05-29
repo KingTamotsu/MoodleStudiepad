@@ -1,5 +1,5 @@
 ﻿namespace MoodleStudiepad.GUI {
-    partial class MainMenu {
+    partial class MainForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -54,7 +54,7 @@
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             // 
             // studieToolStripMenuItem
@@ -69,24 +69,25 @@
             // inschrijvenToolStripMenuItem
             // 
             this.inschrijvenToolStripMenuItem.Name = "inschrijvenToolStripMenuItem";
-            this.inschrijvenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inschrijvenToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.inschrijvenToolStripMenuItem.Text = "Inschrijven";
             // 
             // uitschrijvenToolStripMenuItem
             // 
             this.uitschrijvenToolStripMenuItem.Name = "uitschrijvenToolStripMenuItem";
-            this.uitschrijvenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.uitschrijvenToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.uitschrijvenToolStripMenuItem.Text = "Uitschrijven";
             // 
-            // MainMenu
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "MainMenu";
-            this.Text = "MainMenu";
+            this.Name = "MainForm";
+            this.Text = "MainForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

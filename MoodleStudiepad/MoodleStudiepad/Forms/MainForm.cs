@@ -9,9 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MoodleStudiepad.GUI {
-    public partial class MainMenu : Form {
-        public MainMenu() {
+    public partial class MainForm : Form {
+        public MainForm() {
             InitializeComponent();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e) {
+            Login loginForm = new Login();
+            loginForm.Show();
         }
     }
 }

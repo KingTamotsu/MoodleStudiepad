@@ -103,7 +103,7 @@ namespace MoodleStudiepad.DAL {
             }
 
             conn.Close();
-
+            
             return dataList;
         }
 
