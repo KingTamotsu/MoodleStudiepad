@@ -19,25 +19,6 @@ namespace MoodleStudiepad.DAL {
 
         #region DataMapperToList
 
-        //Uitzoeken hoe dit werkt met onze checkuser (user with inner join roles get sql c# datamapper)
-
-        //public List<object> GetResults(SqlCommand sqlcommand) {
-        //    // input = sqlcommand + soort object
-        //    List<object> resultList = new List<object>();
-        //    using (sqlcommand.Connection) 
-        //    {
-        //        sqlcommand.Connection.Open();
-        //        SqlDataReader reader = sqlcommand.ExecuteReader();
-        //        DataTable schemaTable = reader.GetSchemaTable();
-        //        foreach (DataRow dataRow in schemaTable.Rows) 
-        //        {
-        //            resultList.Add(dataRow);
-        //        }
-        //    }
-        //    return resultList
-        //}
-
-
         public static List<T> DataReaderMapToList<T>(IDataReader dr) {
             var list = new List<T>();
             var obj = default(T);
@@ -60,26 +41,6 @@ namespace MoodleStudiepad.DAL {
 
 
         #region Select Readers
-
-        protected List<UserAccount> getSingleUserReader(SqlCommand cmd) {
-            var dataList = new List<UserAccount>();
-
-            try {
-                connectDB();
-                conn.Open();
-                cmd.Connection = conn;
-                var reader = cmd.ExecuteReader();
-                dataList = DataReaderMapToList<UserAccount>(reader);
-            }
-
-            catch (SqlException error) {
-                //implement error catching
-            }
-
-            conn.Close();
-
-            return dataList;
-        }
 
         //Dit is voor een lijst voor strings van wat die leest en geen object
         protected List<string> getsingleReader(SqlCommand cmd) {
