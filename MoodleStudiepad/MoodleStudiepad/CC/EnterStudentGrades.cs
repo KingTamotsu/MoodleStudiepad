@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoodleStudiepad.CC
 {
-    class ToegewezenKlassenInzien
+    class EnterStudentGrades
     {
     }
 }

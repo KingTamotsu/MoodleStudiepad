@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MoodleStudiepad.CC
 {
-    class VoorgaandeOnderwijseenhedenInzien
+    class SubscribeToModule
     {
+
     }
 }
