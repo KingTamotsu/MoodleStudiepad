@@ -29,6 +29,8 @@
             this.studieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inschrijvenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uitschrijvenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.debuggingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.debug1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -36,7 +38,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mainMenuToolStripMenuItem,
-            this.studieToolStripMenuItem});
+            this.studieToolStripMenuItem,
+            this.debuggingToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -78,15 +81,32 @@
             this.uitschrijvenToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.uitschrijvenToolStripMenuItem.Text = "Uitschrijven";
             // 
+            // debuggingToolStripMenuItem
+            // 
+            this.debuggingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.debug1ToolStripMenuItem});
+            this.debuggingToolStripMenuItem.Name = "debuggingToolStripMenuItem";
+            this.debuggingToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.debuggingToolStripMenuItem.Text = "Debugging";
+            // 
+            // debug1ToolStripMenuItem
+            // 
+            this.debug1ToolStripMenuItem.Name = "debug1ToolStripMenuItem";
+            this.debug1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.debug1ToolStripMenuItem.Text = "Debug 1";
+            this.debug1ToolStripMenuItem.Click += new System.EventHandler(this.debug1ToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -103,5 +123,7 @@
         private System.Windows.Forms.ToolStripMenuItem studieToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inschrijvenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem uitschrijvenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem debuggingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem debug1ToolStripMenuItem;
     }
 }
