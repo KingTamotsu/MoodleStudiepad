@@ -19,10 +19,11 @@ namespace MoodleStudiepad.GUI {
             loginForm.Show();
         }
 
+        #region Toolstrip Buttons
         #region MdiChildren
         /// <summary>
         /// Mdi child form testing. Follow this template to create more mdi children. Stored child forms are in Forms/MdiChildren/.
-        /// You should rename mdiDebuggingForm to the child's name.
+        /// You should rename mdiDebuggingForm to the child's name. Hide the 'Debugging' toolstrip later when done!
         /// </summary>
         private void debug1ToolStripMenuItem_Click(object sender, EventArgs e)                              // Start method by clicking on the toolstrip button
         {                                                                                                   //
@@ -30,6 +31,12 @@ namespace MoodleStudiepad.GUI {
             mdiDebuggingForm.MdiParent = this;                                                              // Set parent form to this form (MainForm.cs)
             mdiDebuggingForm.Show();                                                                        // Show the child form
         }                                                                                                   //
+        #endregion
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         #endregion
     }
 }
