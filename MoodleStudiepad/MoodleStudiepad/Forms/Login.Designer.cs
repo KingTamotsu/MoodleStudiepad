@@ -42,7 +42,7 @@
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
-            this.lbPassword.Location = new System.Drawing.Point(4, 35);
+            this.lbPassword.Location = new System.Drawing.Point(2, 32);
             this.lbPassword.Name = "lbPassword";
             this.lbPassword.Size = new System.Drawing.Size(53, 13);
             this.lbPassword.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(63, 32);
+            this.tbPassword.Location = new System.Drawing.Point(63, 29);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(157, 20);
             this.tbPassword.TabIndex = 3;

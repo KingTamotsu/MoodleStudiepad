@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace MoodleStudiepad.GUI {
     public partial class MainForm : Form {
-        public MainForm() {
+
+        public MainForm(string username) {
             InitializeComponent();
+            lblName.Text = username;
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e) {

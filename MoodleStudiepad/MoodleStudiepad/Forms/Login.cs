@@ -22,12 +22,14 @@ namespace MoodleStudiepad {
                 MessageBox.Show("Give a password");
                 tbPassword.Focus();
             } else if (tbUsername.Text.Length > 0 && tbPassword.Text.Length > 0) {
-                var checkUsername = new CheckUser();
+                CheckUser checkUsername = new CheckUser();
                 checkUser = checkUsername.checkUserOnLogin(tbUsername.Text, tbPassword.Text);
 
                 if (checkUser) {
+                    CheckUser checkUser = new CheckUser();
+                    string user = checkUser.returnUsername2(tbUsername.Text);
                     MessageBox.Show("You are succesfully logged in!");
-                    MainForm mainForm = new MainForm();
+                    MainForm mainForm = new MainForm(user);
                     mainForm.Show();
                     Hide();
                 }

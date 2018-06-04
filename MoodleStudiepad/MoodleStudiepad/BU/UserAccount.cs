@@ -34,5 +34,13 @@ namespace MoodleStudiepad.BU
             }
         }
 
+        public string returnUsername(string username)
+        {
+            QueryStrings queryStrings = new QueryStrings();
+            user = new List<string>();
+            user = queryStrings.selectSingleUser(GetType().Name, username);
+            return user[1].ToString();
+        }
+
     }
 }

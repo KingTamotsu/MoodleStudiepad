@@ -17,5 +17,12 @@ namespace MoodleStudiepad.CC
                 return false;
             }
         }
+
+        public string returnUsername2 (string username)
+        {
+            UserAccount userAccount = new UserAccount();
+            string user = userAccount.returnUsername(username);
+            return user;
+        }
     }
 }
