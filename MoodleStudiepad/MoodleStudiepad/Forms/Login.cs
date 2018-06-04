@@ -26,7 +26,7 @@ namespace MoodleStudiepad {
                 checkUser = checkUsername.checkUserOnLogin(tbUsername.Text, tbPassword.Text);
 
                 if (checkUser) {
-                    MessageBox.Show("You are succesfull logged in!");
+                    MessageBox.Show("You are succesfully logged in!");
                     MainForm mainForm = new MainForm();
                     mainForm.Show();
                     Hide();

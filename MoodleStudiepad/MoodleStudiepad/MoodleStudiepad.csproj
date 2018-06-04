@@ -83,11 +83,29 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MdiChildren\CreditOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MdiChildren\CreditOverview.Designer.cs">
+      <DependentUpon>CreditOverview.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MdiChildren\MdiDebuggingForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\MdiChildren\MdiDebuggingForm.Designer.cs">
       <DependentUpon>MdiDebuggingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MdiChildren\PrestationIndicatorOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MdiChildren\PrestationIndicatorOverview.Designer.cs">
+      <DependentUpon>PrestationIndicatorOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MdiChildren\SubscribedModuleOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MdiChildren\SubscribedModuleOverview.Designer.cs">
+      <DependentUpon>SubscribedModuleOverview.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,8 +115,17 @@
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MdiChildren\CreditOverview.resx">
+      <DependentUpon>CreditOverview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MdiChildren\MdiDebuggingForm.resx">
       <DependentUpon>MdiDebuggingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MdiChildren\PrestationIndicatorOverview.resx">
+      <DependentUpon>PrestationIndicatorOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MdiChildren\SubscribedModuleOverview.resx">
+      <DependentUpon>SubscribedModuleOverview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

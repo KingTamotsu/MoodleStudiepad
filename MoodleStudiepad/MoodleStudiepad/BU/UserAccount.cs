@@ -17,17 +17,21 @@ namespace MoodleStudiepad.BU
             user = new List<string>();
             user = queryStrings.selectSingleUser(GetType().Name, username);
 
-            if (user.Count == 0) {
+            if (user.Count == 0)
+            {
                 return false;
-            } else {
-                if (username == user[1] && password == user[2]) {
+            }
+            else
+            {
+                if (username == user[1] && password == user[2])
+                {
                     return true;
                 }
-                else {
+                else
+                {
                     return false;
                 }
             }
-            
         }
 
     }

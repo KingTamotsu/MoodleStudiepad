@@ -18,6 +18,7 @@ namespace MoodleStudiepad.GUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());   // Show login form
+            //Application.Run(new MainForm());  // Get to main menu quickly
         }
     }
 }

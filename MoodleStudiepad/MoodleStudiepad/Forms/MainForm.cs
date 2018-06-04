@@ -20,7 +20,6 @@ namespace MoodleStudiepad.GUI {
         }
 
         #region Toolstrip Buttons
-        #region MdiChildren
         /// <summary>
         /// Mdi child form testing. Follow this template to create more mdi children. Stored child forms are in Forms/MdiChildren/.
         /// You should rename mdiDebuggingForm to the child's name. Hide the 'Debugging' toolstrip later when done!
@@ -31,12 +30,33 @@ namespace MoodleStudiepad.GUI {
             mdiDebuggingForm.MdiParent = this;                                                              // Set parent form to this form (MainForm.cs)
             mdiDebuggingForm.Show();                                                                        // Show the child form
         }                                                                                                   //
-        #endregion
 
-        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void overzichtOnderwijseenhedenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Forms.MdiChildren.SubscribedModuleOverview mdiSubscribedModuleOverview = new Forms.MdiChildren.SubscribedModuleOverview();
+            mdiSubscribedModuleOverview.MdiParent = this;
+            mdiSubscribedModuleOverview.Show();
+        }
+
+        private void logOut2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
         #endregion
+
+        private void pIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Forms.MdiChildren.PrestationIndicatorOverview mdiPrestationIndicatorOverview = new Forms.MdiChildren.PrestationIndicatorOverview();
+            mdiPrestationIndicatorOverview.MdiParent = this;
+            mdiPrestationIndicatorOverview.Show();
+        }
+
+        private void eCToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Forms.MdiChildren.CreditOverview mdiCreditOverview = new Forms.MdiChildren.CreditOverview();
+            mdiCreditOverview.MdiParent = this;
+            mdiCreditOverview.Show();
+        }
     }
 }
