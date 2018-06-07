@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
 using MoodleStudiepad.DAL;
 
@@ -24,6 +25,12 @@ namespace MoodleStudiepad.BU
         public List<Course> allCourses() {
             QueryStrings queryStrings = new QueryStrings();
             List<Course> allCourses = queryStrings.getAllCourses();
+            return allCourses;
+        }
+
+        public DataTable getAllCoursesForGrid() {
+            QueryStrings queryStrings = new QueryStrings();
+            DataTable allCourses = queryStrings.getAllCoursesForGrid();
             return allCourses;
         }
     }

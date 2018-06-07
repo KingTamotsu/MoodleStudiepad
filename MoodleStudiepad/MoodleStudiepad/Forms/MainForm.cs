@@ -47,20 +47,28 @@ namespace MoodleStudiepad.GUI {
         {
             this.Close();
         }
-        #endregion
 
-        private void pIToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void tempToolStripMenuItem_Click(object sender, EventArgs e) {
+            AllCourses allCourses = new AllCourses();
+            allCourses.MdiParent = this;
+            allCourses.Show();
+        }
+
+        private void pIToolStripMenuItem_Click(object sender, EventArgs e) {
             PrestationIndicatorOverview mdiPrestationIndicatorOverview = new PrestationIndicatorOverview();
             mdiPrestationIndicatorOverview.MdiParent = this;
             mdiPrestationIndicatorOverview.Show();
         }
 
-        private void eCToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void eCToolStripMenuItem_Click(object sender, EventArgs e) {
             CreditOverview mdiCreditOverview = new CreditOverview();
             mdiCreditOverview.MdiParent = this;
             mdiCreditOverview.Show();
         }
+        #endregion
+
+
+
+
     }
 }

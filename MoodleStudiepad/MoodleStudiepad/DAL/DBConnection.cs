@@ -172,6 +172,15 @@ namespace MoodleStudiepad.DAL {
             return courseList;
         }
 
+        protected DataTable allCoursesForGrid(SqlCommand cmd) {
+            SqlDataAdapter sda = new SqlDataAdapter();
+            DataTable dt = new DataTable();
+            sda.SelectCommand = cmd;
+            sda.SelectCommand.Connection = connectDB();
+            sda.Fill(dt);
+            return dt;
+        }
+
         #endregion
 
             #region Update
