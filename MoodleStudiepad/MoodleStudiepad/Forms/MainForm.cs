@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MoodleStudiepad.BU;
+using MoodleStudiepad.CC;
+using MoodleStudiepad.Forms.MdiChildren;
 
 namespace MoodleStudiepad.GUI {
     public partial class MainForm : Form {
@@ -28,7 +31,7 @@ namespace MoodleStudiepad.GUI {
         /// </summary>
         private void debug1ToolStripMenuItem_Click(object sender, EventArgs e)                              // Start method by clicking on the toolstrip button
         {                                                                                                   //
-            Forms.MdiChildren.MdiDebuggingForm mdiDebuggingForm = new Forms.MdiChildren.MdiDebuggingForm(); // Make new instance of the form MdiDebuggingForm.cs
+            MdiDebuggingForm mdiDebuggingForm = new MdiDebuggingForm();                                     // Make new instance of the form MdiDebuggingForm.cs
             mdiDebuggingForm.MdiParent = this;                                                              // Set parent form to this form (MainForm.cs)
             mdiDebuggingForm.Show();                                                                        // Show the child form
         }                                                                                                   //
@@ -36,7 +39,7 @@ namespace MoodleStudiepad.GUI {
 
         private void overzichtOnderwijseenhedenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Forms.MdiChildren.SubscribedModuleOverview mdiSubscribedModuleOverview = new Forms.MdiChildren.SubscribedModuleOverview();
+            SubscribedModuleOverview mdiSubscribedModuleOverview = new SubscribedModuleOverview();
             mdiSubscribedModuleOverview.MdiParent = this;
             mdiSubscribedModuleOverview.Show();
         }
@@ -45,20 +48,35 @@ namespace MoodleStudiepad.GUI {
         {
             this.Close();
         }
-        #endregion
+        
 
         private void pIToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Forms.MdiChildren.PrestationIndicatorOverview mdiPrestationIndicatorOverview = new Forms.MdiChildren.PrestationIndicatorOverview();
+            PrestationIndicatorOverview mdiPrestationIndicatorOverview = new PrestationIndicatorOverview();
             mdiPrestationIndicatorOverview.MdiParent = this;
             mdiPrestationIndicatorOverview.Show();
         }
 
         private void eCToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Forms.MdiChildren.CreditOverview mdiCreditOverview = new Forms.MdiChildren.CreditOverview();
+            CreditOverview mdiCreditOverview = new CreditOverview();
             mdiCreditOverview.MdiParent = this;
             mdiCreditOverview.Show();
         }
+
+        private void coursesToolStripMenuItem_Click(object sender, EventArgs e) {
+            AllCourses mdiAllCourses = new AllCourses();
+            mdiAllCourses.MdiParent = this;
+            mdiAllCourses.Show();
+
+        }
+        #endregion
+
+        private void button1_Click(object sender, EventArgs e) {
+            SeeAllCourses seeAllCourses = new SeeAllCourses();
+            List<Course> courseList = seeAllCourses.allCourses();
+        }
+
+        
     }
 }

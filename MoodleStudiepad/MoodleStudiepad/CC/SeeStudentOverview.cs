@@ -1,12 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using MoodleStudiepad.BU;
+using MoodleStudiepad.DAL;
 
-namespace MoodleStudiepad.CC
-{
-    class SeeStudentOverview
-    {
+namespace MoodleStudiepad.CC {
+    public class SeeStudentOverview {
+        public Student getSingleStudent(int id) {
+            Student student = new Student();
+            Student singleStudent = student.getSingleStudent(id);
+            return singleStudent;
+        }
+
+        public List<Course> courseByStudent(int id) {
+            Course course = new Course();
+            List<Course> coursesByStudent = course.coursesByStudent(id);
+            return coursesByStudent;
+        }
     }
 }
