@@ -36,7 +36,6 @@ namespace MoodleStudiepad.GUI {
             mdiDebuggingForm.Show();                                                                        // Show the child form
         }                                                                                                   //
 
-
         private void overzichtOnderwijseenhedenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SubscribedModuleOverview mdiSubscribedModuleOverview = new SubscribedModuleOverview();
@@ -48,7 +47,7 @@ namespace MoodleStudiepad.GUI {
         {
             this.Close();
         }
-        
+        #endregion
 
         private void pIToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -63,20 +62,5 @@ namespace MoodleStudiepad.GUI {
             mdiCreditOverview.MdiParent = this;
             mdiCreditOverview.Show();
         }
-
-        private void coursesToolStripMenuItem_Click(object sender, EventArgs e) {
-            AllCourses mdiAllCourses = new AllCourses();
-            mdiAllCourses.MdiParent = this;
-            mdiAllCourses.Show();
-
-        }
-        #endregion
-
-        private void button1_Click(object sender, EventArgs e) {
-            SeeAllCourses seeAllCourses = new SeeAllCourses();
-            List<Course> courseList = seeAllCourses.allCourses();
-        }
-
-        
     }
 }
