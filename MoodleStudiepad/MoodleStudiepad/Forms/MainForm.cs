@@ -33,19 +33,12 @@ namespace MoodleStudiepad.GUI {
             mdiDebuggingForm.Show();                                                                        // Show the child form
         }                                                                                                   //
 
-
         private void overzichtOnderwijseenhedenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Forms.MdiChildren.SubscribedModuleOverview mdiSubscribedModuleOverview = new Forms.MdiChildren.SubscribedModuleOverview();
             mdiSubscribedModuleOverview.MdiParent = this;
             mdiSubscribedModuleOverview.Show();
         }
-
-        private void logOut2ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        #endregion
 
         private void pIToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -60,5 +53,22 @@ namespace MoodleStudiepad.GUI {
             mdiCreditOverview.MdiParent = this;
             mdiCreditOverview.Show();
         }
+
+        /// <summary>
+        /// Log out button. Shows a pop-up first with a yes/no if the user wants to log out.
+        /// </summary>
+        private void logOut2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var logoutConfirmation = MessageBox.Show("Are you sure you want to log out?", "Yes No", MessageBoxButtons.YesNo);
+            if (logoutConfirmation == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+                // do nothing.
+            }
+        }
+        #endregion
     }
 }
