@@ -16,11 +16,5 @@ namespace MoodleStudiepad.CC {
             List<Course> coursesByStudent = course.coursesByStudent(id);
             return coursesByStudent;
         }
-
-        public DataTable getAllCoursesForGrid() {
-            Course course = new Course();
-            DataTable allCourses = course.getAllCoursesForGrid();
-            return allCourses;
-        }
     }
 }

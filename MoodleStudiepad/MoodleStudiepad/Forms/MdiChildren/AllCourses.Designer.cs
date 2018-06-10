@@ -23,33 +23,44 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.dGV_Courses = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dGV_Courses)).BeginInit();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // dGV_Courses
+            // listView1
             // 
-            this.dGV_Courses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGV_Courses.Location = new System.Drawing.Point(12, 12);
-            this.dGV_Courses.Name = "dGV_Courses";
-            this.dGV_Courses.Size = new System.Drawing.Size(776, 426);
-            this.dGV_Courses.TabIndex = 0;
+            this.listView1.Location = new System.Drawing.Point(36, 41);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(467, 184);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(559, 54);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 1;
+            this.btnEdit.Text = "EDIT";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // AllCourses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dGV_Courses);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.listView1);
             this.Name = "AllCourses";
             this.Text = "AllCourses";
-            ((System.ComponentModel.ISupportInitialize)(this.dGV_Courses)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dGV_Courses;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button btnEdit;
     }
 }

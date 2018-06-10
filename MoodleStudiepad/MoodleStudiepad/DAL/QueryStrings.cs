@@ -34,11 +34,6 @@ namespace MoodleStudiepad.DAL {
             List<Course> readerList = SelectAllCourses(new SqlCommand("Select * FROM Course"));
             return readerList;
         }
-
-        public DataTable getAllCoursesForGrid() {
-            DataTable readerResult = allCoursesForGrid(new SqlCommand("Select * FROM Course"));
-            return readerResult;
-        }
         #endregion
     }
 }

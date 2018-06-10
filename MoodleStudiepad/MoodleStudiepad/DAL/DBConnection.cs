@@ -120,7 +120,7 @@ namespace MoodleStudiepad.DAL {
                 while (reader.Read()) {
                     foreach (DataRow row in schemaTable.Rows) {
                         course = new Course() {
-                            id = reader.GetInt32(reader.GetOrdinal("courseId")),
+                            courseId = reader.GetInt32(reader.GetOrdinal("courseId")),
                             name = reader.GetString(reader.GetOrdinal("name")),
                             courseCode = reader.GetString(reader.GetOrdinal("courseCode")),
                             credits = reader.GetInt32(reader.GetOrdinal("credits")),
@@ -153,7 +153,7 @@ namespace MoodleStudiepad.DAL {
                 while (reader.Read()) {
                     foreach (DataRow row in schemaTable.Rows) {
                         course = new Course() {
-                            id = reader.GetInt32(reader.GetOrdinal("courseId")),
+                            courseId = reader.GetInt32(reader.GetOrdinal("courseId")),
                             name = reader.GetString(reader.GetOrdinal("name")),
                             courseCode = reader.GetString(reader.GetOrdinal("courseCode")),
                             credits = reader.GetInt32(reader.GetOrdinal("credits")),
@@ -170,15 +170,6 @@ namespace MoodleStudiepad.DAL {
             }
             this.conn.Close();
             return courseList;
-        }
-
-        protected DataTable allCoursesForGrid(SqlCommand cmd) {
-            SqlDataAdapter sda = new SqlDataAdapter();
-            DataTable dt = new DataTable();
-            sda.SelectCommand = cmd;
-            sda.SelectCommand.Connection = connectDB();
-            sda.Fill(dt);
-            return dt;
         }
 
         #endregion
