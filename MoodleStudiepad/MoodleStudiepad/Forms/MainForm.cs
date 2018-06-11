@@ -59,7 +59,7 @@ namespace MoodleStudiepad.GUI {
         /// </summary>
         private void logOut2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var logoutConfirmation = MessageBox.Show("Are you sure you want to log out?", "Yes No", MessageBoxButtons.YesNo);
+            var logoutConfirmation = MessageBox.Show("Are you sure you want to log out?", "Log out?", MessageBoxButtons.YesNo);
             if (logoutConfirmation == DialogResult.Yes)
             {
                 this.Close();
