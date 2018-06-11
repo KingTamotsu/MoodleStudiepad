@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MoodleStudiepad.BU;
+using MoodleStudiepad.CC;
+using MoodleStudiepad.Forms.MdiChildren;
 
 namespace MoodleStudiepad.GUI {
     public partial class MainForm : Form {
@@ -28,47 +31,44 @@ namespace MoodleStudiepad.GUI {
         /// </summary>
         private void debug1ToolStripMenuItem_Click(object sender, EventArgs e)                              // Start method by clicking on the toolstrip button
         {                                                                                                   //
-            Forms.MdiChildren.MdiDebuggingForm mdiDebuggingForm = new Forms.MdiChildren.MdiDebuggingForm(); // Make new instance of the form MdiDebuggingForm.cs
+            MdiDebuggingForm mdiDebuggingForm = new MdiDebuggingForm();                                     // Make new instance of the form MdiDebuggingForm.cs
             mdiDebuggingForm.MdiParent = this;                                                              // Set parent form to this form (MainForm.cs)
             mdiDebuggingForm.Show();                                                                        // Show the child form
         }                                                                                                   //
 
         private void overzichtOnderwijseenhedenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Forms.MdiChildren.SubscribedModuleOverview mdiSubscribedModuleOverview = new Forms.MdiChildren.SubscribedModuleOverview();
+            SubscribedModuleOverview mdiSubscribedModuleOverview = new SubscribedModuleOverview();
             mdiSubscribedModuleOverview.MdiParent = this;
             mdiSubscribedModuleOverview.Show();
         }
 
-        private void pIToolStripMenuItem_Click(object sender, EventArgs e)
+        private void logOut2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Forms.MdiChildren.PrestationIndicatorOverview mdiPrestationIndicatorOverview = new Forms.MdiChildren.PrestationIndicatorOverview();
+            this.Close();
+        }
+
+        private void tempToolStripMenuItem_Click(object sender, EventArgs e) {
+            AllCourses allCourses = new AllCourses();
+            allCourses.MdiParent = this;
+            allCourses.Show();
+        }
+
+        private void pIToolStripMenuItem_Click(object sender, EventArgs e) {
+            PrestationIndicatorOverview mdiPrestationIndicatorOverview = new PrestationIndicatorOverview();
             mdiPrestationIndicatorOverview.MdiParent = this;
             mdiPrestationIndicatorOverview.Show();
         }
 
-        private void eCToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Forms.MdiChildren.CreditOverview mdiCreditOverview = new Forms.MdiChildren.CreditOverview();
+        private void eCToolStripMenuItem_Click(object sender, EventArgs e) {
+            CreditOverview mdiCreditOverview = new CreditOverview();
             mdiCreditOverview.MdiParent = this;
             mdiCreditOverview.Show();
         }
-
-        /// <summary>
-        /// Log out button. Shows a pop-up first with a yes/no if the user wants to log out.
-        /// </summary>
-        private void logOut2ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var logoutConfirmation = MessageBox.Show("Are you sure you want to log out?", "Yes No", MessageBoxButtons.YesNo);
-            if (logoutConfirmation == DialogResult.Yes)
-            {
-                this.Close();
-            }
-            else
-            {
-                // do nothing.
-            }
-        }
         #endregion
+
+
+
+
     }
 }

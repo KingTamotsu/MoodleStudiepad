@@ -51,6 +51,7 @@
     <Compile Include="BU\Student.cs" />
     <Compile Include="BU\UserAccount.cs" />
     <Compile Include="CC\CheckUser.cs" />
+    <Compile Include="CC\SeeAllCourses.cs" />
     <Compile Include="CC\SubscribeToModule.cs" />
     <Compile Include="CC\SeeContactDetailsStudent.cs" />
     <Compile Include="CC\SeeCredits.cs" />
@@ -83,6 +84,18 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MdiChildren\AllCoursesEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MdiChildren\AllCoursesEdit.Designer.cs">
+      <DependentUpon>AllCoursesEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MdiChildren\AllCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MdiChildren\AllCourses.Designer.cs">
+      <DependentUpon>AllCourses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MdiChildren\CreditOverview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +127,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MdiChildren\AllCoursesEdit.resx">
+      <DependentUpon>AllCoursesEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MdiChildren\AllCourses.resx">
+      <DependentUpon>AllCourses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MdiChildren\CreditOverview.resx">
       <DependentUpon>CreditOverview.cs</DependentUpon>

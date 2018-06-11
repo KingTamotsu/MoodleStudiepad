@@ -35,8 +35,10 @@
             this.debuggingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.debug1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.coursesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblName = new System.Windows.Forms.Label();
+            this.tempToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +49,9 @@
             this.studieToolStripMenuItem,
             this.resultatenToolStripMenuItem,
             this.debuggingToolStripMenuItem,
-            this.personalToolStripMenuItem});
+            this.personalToolStripMenuItem,
+            this.coursesToolStripMenuItem,
+            this.tempToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -134,6 +138,11 @@
             this.personalToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.personalToolStripMenuItem.Text = "Personal";
             // 
+            // coursesToolStripMenuItem
+            // 
+            this.coursesToolStripMenuItem.Name = "coursesToolStripMenuItem";
+            this.coursesToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
+            // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
@@ -148,6 +157,13 @@
             this.lblName.TabIndex = 2;
             this.lblName.Text = "Bob Bobberton";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // tempToolStripMenuItem
+            // 
+            this.tempToolStripMenuItem.Name = "tempToolStripMenuItem";
+            this.tempToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.tempToolStripMenuItem.Text = "Temp";
+            this.tempToolStripMenuItem.Click += new System.EventHandler(this.tempToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -185,5 +201,7 @@
         private System.Windows.Forms.ToolStripMenuItem eCToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personalToolStripMenuItem;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.ToolStripMenuItem coursesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tempToolStripMenuItem;
     }
 }

@@ -6,40 +6,34 @@ using MoodleStudiepad.DAL;
 namespace MoodleStudiepad.BU
 {
     public class UserAccount {
-        private int userId;
-        private string username;
-        private string password;
-        private string role;
-        private List<string> user;
+        public int userId;
+        public string username;
+        public string password;
+        public string role;
 
         public bool checkUser(string username, string password) {
             QueryStrings queryStrings = new QueryStrings();
-            user = new List<string>();
-            user = queryStrings.selectSingleUser(GetType().Name, username);
+            UserAccount user = new UserAccount();
+            user = queryStrings.selectSingleUser(username);
 
-            if (user.Count == 0)
-            {
+            if (user == null) {
                 return false;
             }
-            else
-            {
-                if (username == user[1] && password == user[2])
-                {
+            else {
+                if (username == user.username && password == user.password) {
                     return true;
                 }
-                else
-                {
+                else {
                     return false;
                 }
             }
         }
 
-        public string returnUsername(string username)
-        {
+        public string returnUsername(string username) {
             QueryStrings queryStrings = new QueryStrings();
-            user = new List<string>();
-            user = queryStrings.selectSingleUser(GetType().Name, username);
-            return user[1].ToString();
+            UserAccount user = new UserAccount();
+            user = queryStrings.selectSingleUser(username);
+            return user.username;
         }
 
     }
