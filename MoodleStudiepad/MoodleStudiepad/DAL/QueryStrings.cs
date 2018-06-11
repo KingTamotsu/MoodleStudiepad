@@ -38,6 +38,12 @@ namespace MoodleStudiepad.DAL {
         // Get grade by student id
         // SELECT stu.studentId, stu.firstName, stu.lastName, cou.courseCode, cou.name, pre.grade FROM Student stu, Course cou, PrestationIndicator pre INNER JOIN StudentCourse sc1 ON sc1.studentId = sc1.studentId WHERE stu.studentId = sc1.studentId AND cou.courseId = sc1.courseId AND stu.studentId = '2' AND stu.studentId = pre.studentId AND cou.courseId = pre.courseId ORDER BY stu.studentId;
 
+        // Get past modules
+        // SELECT stu.studentId, stu.firstName, stu.lastName, cou.courseCode, cou.name FROM Student stu, Course cou, PreviousCourse pco INNER JOIN StudentCourse sc1 ON sc1.studentId = sc1.studentId WHERE stu.studentId = sc1.studentId AND cou.courseId = sc1.courseId AND stu.studentId = '2' AND stu.studentId = pco.studentId AND cou.courseId = pco.courseId ORDER BY stu.studentId;
+
+        // Get passed modules
+        // SELECT stu.studentId, stu.firstName, stu.lastName, cou.courseCode, cou.name, pco.passed FROM Student stu, Course cou, PreviousCourse pco INNER JOIN StudentCourse sc1 ON sc1.studentId = sc1.studentId WHERE stu.studentId = sc1.studentId AND cou.courseId = sc1.courseId AND stu.studentId = '2' AND stu.studentId = pco.studentId AND cou.courseId = pco.courseId ORDER BY stu.studentId;
+
         #endregion
     }
 }
