@@ -51,6 +51,7 @@
     <Compile Include="BU\Student.cs" />
     <Compile Include="BU\UserAccount.cs" />
     <Compile Include="CC\CheckUser.cs" />
+    <Compile Include="CC\EditStudent.cs" />
     <Compile Include="CC\SeeAllCourses.cs" />
     <Compile Include="CC\SubscribeToModule.cs" />
     <Compile Include="CC\SeeContactDetailsStudent.cs" />
