@@ -43,9 +43,20 @@ namespace MoodleStudiepad.GUI {
             mdiSubscribedModuleOverview.Show();
         }
 
+        /// <summary>
+        /// Log out button. Shows a pop-up first with a yes/no if the user wants to log out.
+        /// </summary>
         private void logOut2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            var logoutConfirmation = MessageBox.Show("Are you sure you want to log out?", "Log out?", MessageBoxButtons.YesNo);
+            if (logoutConfirmation == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+                // do nothing.
+            }
         }
 
         private void tempToolStripMenuItem_Click(object sender, EventArgs e) {
