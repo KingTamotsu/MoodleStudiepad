@@ -34,6 +34,10 @@ namespace MoodleStudiepad.DAL {
             List<Course> readerList = SelectAllCourses(new SqlCommand("Select * FROM Course"));
             return readerList;
         }
+
+        // Get grade by student id
+        // SELECT stu.studentId, stu.firstName, stu.lastName, cou.courseCode, cou.name, pre.grade FROM Student stu, Course cou, PrestationIndicator pre INNER JOIN StudentCourse sc1 ON sc1.studentId = sc1.studentId WHERE stu.studentId = sc1.studentId AND cou.courseId = sc1.courseId AND stu.studentId = '2' AND stu.studentId = pre.studentId AND cou.courseId = pre.courseId ORDER BY stu.studentId;
+
         #endregion
     }
 }
