@@ -45,5 +45,12 @@ namespace MoodleStudiepad.DAL {
         // SELECT stu.studentId, stu.firstName, stu.lastName, cou.courseCode, cou.name, pco.passed FROM Student stu, Course cou, PreviousCourse pco INNER JOIN StudentCourse sc1 ON sc1.studentId = sc1.studentId WHERE stu.studentId = sc1.studentId AND cou.courseId = sc1.courseId AND stu.studentId = '2' AND stu.studentId = pco.studentId AND cou.courseId = pco.courseId ORDER BY stu.studentId;
 
         #endregion
+
+        #region Update
+
+        //UPDATE Course SET courseCode = 'A1A1000', name= 'Weet ik veel', schoolYear= 2, blockPeriod= 2, credits= 100 WHERE courseId = 1;
+
+
+        #endregion
     }
 }

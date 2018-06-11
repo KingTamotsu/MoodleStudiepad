@@ -42,7 +42,7 @@ namespace MoodleStudiepad.Forms.MdiChildren {
             listView1.Columns.Add("credits");
 
             foreach (Course item in temp) {
-                listView1.Items.Add(new ListViewItem(new string[]{ item.name, item.courseId.ToString(), item.courseCode, item.schoolYear.ToString(), item.blockPeriod.ToString(), item.credits.ToString()}));
+                listView1.Items.Add(new ListViewItem(new string[]{item.courseId.ToString(), item.name, item.courseCode, item.schoolYear.ToString(), item.blockPeriod.ToString(), item.credits.ToString()}));
 
 
             }
@@ -50,16 +50,16 @@ namespace MoodleStudiepad.Forms.MdiChildren {
 
         private void btnEdit_Click(object sender, EventArgs e) {
             var x = listView1.SelectedItems[0];
-            Course tempCourse = new Course();
-            tempCourse.name = x.SubItems[0].Text;
-            tempCourse.courseId = Int32.Parse(x.SubItems[1].Text);
-            tempCourse.courseCode = x.SubItems[2].Text;
-            tempCourse.schoolYear = Int32.Parse(x.SubItems[3].Text);
-            tempCourse.blockPeriod = Int32.Parse(x.SubItems[4].Text);
-            tempCourse.credits = Int32.Parse(x.SubItems[5].Text);
+            Course course = new Course();
+            course.courseId = Int32.Parse(x.SubItems[0].Text);
+            course.name = x.SubItems[1].Text;
+            course.courseCode = x.SubItems[2].Text;
+            course.schoolYear = Int32.Parse(x.SubItems[3].Text);
+            course.blockPeriod = Int32.Parse(x.SubItems[4].Text);
+            course.credits = Int32.Parse(x.SubItems[5].Text);
 
 
-            AllCoursesEdit allCoursesEdit = new AllCoursesEdit(tempCourse);
+            AllCoursesEdit allCoursesEdit = new AllCoursesEdit(course);
             allCoursesEdit.Show();
         }
     }

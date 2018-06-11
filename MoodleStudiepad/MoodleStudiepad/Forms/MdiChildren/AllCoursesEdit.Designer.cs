@@ -34,6 +34,7 @@
             this.tbSchoolYear = new System.Windows.Forms.TextBox();
             this.tbBlockPeriod = new System.Windows.Forms.TextBox();
             this.tbCredits = new System.Windows.Forms.TextBox();
+            this.lbCourseId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSave
@@ -42,8 +43,9 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 0;
-            this.btnSave.Text = "button1";
+            this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label1
             // 
@@ -125,11 +127,21 @@
             this.tbCredits.Size = new System.Drawing.Size(100, 20);
             this.tbCredits.TabIndex = 10;
             // 
-            // AllCoursedEdit
+            // lbCourseId
+            // 
+            this.lbCourseId.AutoSize = true;
+            this.lbCourseId.Location = new System.Drawing.Point(156, 173);
+            this.lbCourseId.Name = "lbCourseId";
+            this.lbCourseId.Size = new System.Drawing.Size(18, 13);
+            this.lbCourseId.TabIndex = 11;
+            this.lbCourseId.Text = "ID";
+            // 
+            // AllCoursesEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(215, 198);
+            this.Controls.Add(this.lbCourseId);
             this.Controls.Add(this.tbCredits);
             this.Controls.Add(this.tbBlockPeriod);
             this.Controls.Add(this.tbSchoolYear);
@@ -141,7 +153,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSave);
-            this.Name = "AllCoursedEdit";
+            this.Name = "AllCoursesEdit";
             this.Text = "AllCoursedEdit";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -161,5 +173,6 @@
         private System.Windows.Forms.TextBox tbSchoolYear;
         private System.Windows.Forms.TextBox tbBlockPeriod;
         private System.Windows.Forms.TextBox tbCredits;
+        private System.Windows.Forms.Label lbCourseId;
     }
 }
