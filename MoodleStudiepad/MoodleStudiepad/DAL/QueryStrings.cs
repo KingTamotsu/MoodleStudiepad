@@ -57,7 +57,7 @@ namespace MoodleStudiepad.DAL {
         #region Add
 
         public bool addCourse(Course course, string data) {
-            return addCourse(new SqlCommand("INSERT into Course ('" + course.courseCode + "', '" + course.name + "' , '" + course.schoolYear + "', '" + course.blockPeriod + "', '" + course.credits + "') VALUES ('" + data + "')", base.conn));
+            return addCourse(new SqlCommand("INSERT into Course (courseCode, name , schoolYear, blockPeriod, credits) VALUES ('" + data + "')", base.conn));
         }
 
         #endregion
