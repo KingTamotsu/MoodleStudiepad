@@ -48,6 +48,7 @@
     <Compile Include="BU\Class.cs" />
     <Compile Include="BU\Course.cs" />
     <Compile Include="BU\Employee.cs" />
+    <Compile Include="BU\PrestationIndicator.cs" />
     <Compile Include="BU\Student.cs" />
     <Compile Include="BU\UserAccount.cs" />
     <Compile Include="CC\AddCourse.cs" />
