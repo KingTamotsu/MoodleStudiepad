@@ -11,24 +11,15 @@ using MoodleStudiepad.BU;
 using MoodleStudiepad.CC;
 
 namespace MoodleStudiepad.Forms.MdiChildren {
-    public partial class AllCoursesEdit : Form {
-        EditCourse editCourse = new EditCourse();
+    public partial class AllCoursesAdd : Form {
         private AllCourses form;
-
-        public AllCoursesEdit(Course course, AllCourses form) {
+        public AllCoursesAdd(AllCourses form) {
             InitializeComponent();
-            lbCourseId.Text = course.courseId.ToString();
-            tbCourseName.Text = course.name;
-            tbCourseCode.Text = course.courseCode;
-            tbSchoolYear.Text = course.schoolYear.ToString();
-            tbBlockPeriod.Text = course.blockPeriod.ToString();
-            tbCredits.Text = course.credits.ToString();
             this.form = form;
         }
 
-        private void btnSave_Click(object sender, EventArgs e) {
+        private void btnAdd_Click(object sender, EventArgs e) {
             Course course = new Course() {
-                courseId = Int32.Parse(lbCourseId.Text),
                 name = tbCourseName.Text,
                 courseCode = tbCourseCode.Text,
                 schoolYear = Int32.Parse(tbSchoolYear.Text),
@@ -36,9 +27,10 @@ namespace MoodleStudiepad.Forms.MdiChildren {
                 credits = Int32.Parse(tbCredits.Text)
             };
 
-            
-            editCourse.editCourse(course);
-            form.refreshListview();
+            AddCourse addCourse = new AddCourse();
+            if (!addCourse.addCourse(course)) {
+                MessageBox.Show("Something went wrong please try again!", "Error", MessageBoxButtons.OK);
+            }
         }
     }
 }

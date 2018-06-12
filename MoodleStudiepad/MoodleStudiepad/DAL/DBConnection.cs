@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.Drawing.Text;
 using MoodleStudiepad.BU;
 
 namespace MoodleStudiepad.DAL {
@@ -174,7 +175,55 @@ namespace MoodleStudiepad.DAL {
 
         #endregion
 
-            #region Update
+        #region Add
+
+        protected bool addCourse(SqlCommand cmd) {
+            bool successfulEdit;
+
+            try {
+                connectDB();
+                conn.Open();
+                cmd.Connection = conn;
+                if (cmd.ExecuteNonQuery() > 0) {
+                    successfulEdit = true;
+                }
+                else {
+                    successfulEdit = false;
+                }
+            }
+            catch (SqlException error) {
+                throw error;
+            }
+            conn.Close();
+            return successfulEdit;
+        }
+
+        #endregion
+
+        #region Update
+
+        protected bool editCourse(SqlCommand cmd) {
+            
+        bool successfulEdit;
+
+            try {
+                connectDB(); 
+                conn.Open();
+                cmd.Connection = conn;
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    successfulEdit = true;
+                } else
+                {
+                    successfulEdit = false;
+                }
+            }
+            catch (SqlException error) {
+                throw error;
+            }
+            conn.Close();
+            return successfulEdit;
+        }
 
             #endregion
 

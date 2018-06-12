@@ -50,6 +50,7 @@
     <Compile Include="BU\Employee.cs" />
     <Compile Include="BU\Student.cs" />
     <Compile Include="BU\UserAccount.cs" />
+    <Compile Include="CC\AddCourse.cs" />
     <Compile Include="CC\CheckUser.cs" />
     <Compile Include="CC\EditCourse.cs" />
     <Compile Include="CC\EditStudent.cs" />
@@ -85,6 +86,12 @@
     </Compile>
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MdiChildren\AllCoursesAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MdiChildren\AllCoursesAdd.Designer.cs">
+      <DependentUpon>AllCoursesAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MdiChildren\AllCoursesEdit.cs">
       <SubType>Form</SubType>
@@ -129,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MdiChildren\AllCoursesAdd.resx">
+      <DependentUpon>AllCoursesAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MdiChildren\AllCoursesEdit.resx">
       <DependentUpon>AllCoursesEdit.cs</DependentUpon>
