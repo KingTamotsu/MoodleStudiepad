@@ -16,11 +16,18 @@ namespace MoodleStudiepad.CC
         //    return allCourses;
         //}
 
-        public List<PrestationIndicator> getPrestationIndicators(int id)
+        public List<PrestationIndicator> getPrestationIndicatorsById(int id)
         {
             PrestationIndicator prestationIndicator = new PrestationIndicator();
-            List<PrestationIndicator> piList = prestationIndicator.getPrestationIndicators(id);
+            List<PrestationIndicator> piList = prestationIndicator.getPrestationIndicatorsById(id);
             return piList;
+        }
+
+        public List<PrestationIndicator> getAverageGradeById(int id)
+        {
+            PrestationIndicator prestationIndicator = new PrestationIndicator();
+            List<PrestationIndicator> gradeList = prestationIndicator.getAverageGradeById(id);
+            return gradeList;
         }
     }
 }

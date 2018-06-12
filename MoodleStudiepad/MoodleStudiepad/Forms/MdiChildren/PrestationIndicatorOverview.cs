@@ -17,6 +17,7 @@ namespace MoodleStudiepad.Forms.MdiChildren
     {
         SeePrestationIndicators seePrestationIndicators = new SeePrestationIndicators();
         List<PrestationIndicator> temp = new List<PrestationIndicator>();
+        private bool indiv = true;
 
         public PrestationIndicatorOverview()
         {
@@ -41,17 +42,54 @@ namespace MoodleStudiepad.Forms.MdiChildren
             // Display grid lines.
             listView1.GridLines = true;
 
-            listView1.Columns.Add("courseId");
-            listView1.Columns.Add("piCode");
-            listView1.Columns.Add("grade");
+            if (indiv)
+            {
+                listView1.Columns.Add("courseId");
+                listView1.Columns.Add("piCode");
+                listView1.Columns.Add("grade");
+            }
+            else
+            {
+                listView1.Columns.Add("courseId");
+                listView1.Columns.Add("avgGrade");
+            }
         }
         public void fillListview()
         {
-            temp = seePrestationIndicators.getPrestationIndicators(2);
-            foreach (PrestationIndicator item in temp)
+            if (indiv)
             {
-                listView1.Items.Add(new ListViewItem(new string[] { item.courseId.ToString(), item.piCode.ToString(), item.grade.ToString()}));
+                temp = seePrestationIndicators.getPrestationIndicatorsById(2);
+                foreach (PrestationIndicator item in temp)
+                {
+                    listView1.Items.Add(new ListViewItem(new string[] { item.courseId.ToString(), item.piCode.ToString(), item.grade.ToString() }));
+                }
             }
+            else
+            {
+                temp = seePrestationIndicators.getAverageGradeById(2);
+                foreach (PrestationIndicator item in temp)
+                {
+                    listView1.Items.Add(new ListViewItem(new string[] { item.courseId.ToString(), item.avgGrade.ToString()}));
+                }
+            }
+        }
+
+        private void bt_indivPi_Click(object sender, EventArgs e)
+        {
+            indiv = true;
+            listView1.Clear();
+            listView1.Columns.Clear();
+            createListview();
+            fillListview();
+        }
+
+        private void bt_avgPi_Click(object sender, EventArgs e)
+        {
+            indiv = false;
+            listView1.Clear();
+            listView1.Columns.Clear();
+            createListview();
+            fillListview();
         }
     }
 }
