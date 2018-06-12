@@ -42,7 +42,6 @@ namespace MoodleStudiepad.Forms.MdiChildren
             listView1.GridLines = true;
 
             listView1.Columns.Add("courseId");
-            listView1.Columns.Add("name");
             listView1.Columns.Add("piCode");
             listView1.Columns.Add("grade");
         }

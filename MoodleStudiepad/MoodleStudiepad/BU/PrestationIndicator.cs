@@ -10,8 +10,7 @@ namespace MoodleStudiepad.BU {
         public int studentId;
         public int courseId;
         public int piCode;
-        public double grade;
-        public int weight;
+        public decimal grade;
         public float avgGrade;
 
         public List<PrestationIndicator> getPrestationIndicators(int id) {

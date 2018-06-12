@@ -39,7 +39,7 @@ namespace MoodleStudiepad.DAL {
         // Get pi by student id
         public List<PrestationIndicator> getPrestationIndicatorsById(int id)
         {
-            List<PrestationIndicator> readerList = SelectPrestationIndicators(new SqlCommand("SELECT cou.courseCode, cou.name, pre.piCode, pre.grade FROM Student stu, Course cou, PrestationIndicator pre INNER JOIN StudentCourse sc1 ON sc1.studentId = sc1.studentId WHERE stu.studentId = sc1.studentId AND cou.courseId = sc1.courseId AND stu.studentId = " + id + " AND stu.studentId = pre.studentId AND cou.courseId = pre.courseId ORDER BY stu.studentId;"));
+            List<PrestationIndicator> readerList = SelectPrestationIndicators(new SqlCommand("SELECT stu.studentId, cou.courseId, pre.piCode, pre.grade FROM Student stu, Course cou, PrestationIndicator pre INNER JOIN StudentCourse sc1 ON sc1.studentId = sc1.studentId WHERE stu.studentId = sc1.studentId AND cou.courseId = sc1.courseId AND stu.studentId = " + id + " AND stu.studentId = pre.studentId AND cou.courseId = pre.courseId ORDER BY stu.studentId;"));
             return readerList;
         }
 

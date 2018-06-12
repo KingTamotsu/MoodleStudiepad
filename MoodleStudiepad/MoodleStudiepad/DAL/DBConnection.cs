@@ -197,8 +197,7 @@ namespace MoodleStudiepad.DAL {
                             studentId = reader.GetInt32(reader.GetOrdinal("studentId")),
                             courseId = reader.GetInt32(reader.GetOrdinal("courseId")),
                             piCode = reader.GetInt32(reader.GetOrdinal("piCode")),
-                            grade = reader.GetInt32(reader.GetOrdinal("grade")),
-                            weight = reader.GetInt32(reader.GetOrdinal("weight"))
+                            grade = reader.GetDecimal(reader.GetOrdinal("grade"))
                         };
                     }
 
