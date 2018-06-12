@@ -172,15 +172,55 @@ namespace MoodleStudiepad.DAL {
             return courseList;
         }
 
+        // To do
+        protected List<PrestationIndicator> SelectPrestationIndicators(SqlCommand cmd)
+        {
+            PrestationIndicator prestationIndicator = new PrestationIndicator();
+            List<PrestationIndicator> piList = new List<PrestationIndicator>();
+
+            try
+            {
+                connectDB();
+                conn.Open();
+                cmd.Connection = conn;
+                SqlDataReader reader = cmd.ExecuteReader();
+                DataTable schemaTable = reader.GetSchemaTable();
+
+
+                while (reader.Read())
+                {
+                    foreach (DataRow row in schemaTable.Rows)
+                    {
+                        prestationIndicator = new PrestationIndicator()
+                        {
+                            studentId = reader.GetInt32(reader.GetOrdinal("studentId")),
+                            courseId = reader.GetInt32(reader.GetOrdinal("courseId")),
+                            piCode = reader.GetInt32(reader.GetOrdinal("piCode")),
+                            grade = reader.GetInt32(reader.GetOrdinal("grade")),
+                            weight = reader.GetInt32(reader.GetOrdinal("weight"))
+                        };
+                    }
+
+                    piList.Add(prestationIndicator);
+                }
+            }
+            catch (System.Data.SqlClient.SqlException error)
+            {
+                throw error;
+            }
+            this.conn.Close();
+            return piList;
+        }
+
         #endregion
 
-            #region Update
+        #region Update
 
-            #endregion
+        #endregion
 
-            #region Delete
+        #region Delete
 
-            #endregion
+        #endregion
 
-        }
+    }
 }
