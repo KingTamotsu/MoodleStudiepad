@@ -31,6 +31,8 @@ namespace MoodleStudiepad.Forms.MdiChildren {
             if (!addCourse.addCourse(course)) {
                 MessageBox.Show("Something went wrong please try again!", "Error", MessageBoxButtons.OK);
             }
+
+            form.refreshListview();
         }
     }
 }
