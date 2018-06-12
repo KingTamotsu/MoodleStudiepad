@@ -10,19 +10,20 @@ namespace MoodleStudiepad.BU {
         public int studentId;
         public int courseId;
         public int piCode;
-        public double grade;
-        public int weight;
-        public float avgGrade;
+        public decimal grade;
+        public decimal avgGrade;
 
-        public List<PrestationIndicator> getPrestationIndicators(int id) {
+        public List<PrestationIndicator> getPrestationIndicatorsById(int id) {
             // return list of prestation indicators
             QueryStrings queryStrings = new QueryStrings();
             List<PrestationIndicator> piList = queryStrings.getPrestationIndicatorsById(id);
             return piList;
         }
 
-        void getAverageGrades() {
-            // return avgGrade
+        public List<PrestationIndicator> getAverageGradeById(int id) {
+            QueryStrings queryStrings = new QueryStrings();
+            List<PrestationIndicator> gradeList = queryStrings.getAverageGradeById(id);
+            return gradeList;
         }
 
         //public Student getSingleStudent(int id)
