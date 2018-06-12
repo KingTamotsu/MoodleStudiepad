@@ -215,10 +215,11 @@ namespace MoodleStudiepad.DAL {
 
         #endregion
 
+        //Dit word maar 1 method genaamt execute die je kunt gebruiken voor alle classes om objecten toe te voegen.
 
         #region Add
 
-        protected bool addCourse(SqlCommand cmd) {
+        protected bool execute(SqlCommand cmd) {
             bool successfulEdit;
 
             try {
