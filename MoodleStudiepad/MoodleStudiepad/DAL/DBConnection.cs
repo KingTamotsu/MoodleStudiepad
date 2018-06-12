@@ -215,9 +215,59 @@ namespace MoodleStudiepad.DAL {
 
         #endregion
 
-            #region Update
 
-            #endregion
+        #region Add
+
+        protected bool addCourse(SqlCommand cmd) {
+            bool successfulEdit;
+
+            try {
+                connectDB();
+                conn.Open();
+                cmd.Connection = conn;
+                if (cmd.ExecuteNonQuery() > 0) {
+                    successfulEdit = true;
+                }
+                else {
+                    successfulEdit = false;
+                }
+            }
+            catch (SqlException error) {
+                throw error;
+            }
+
+            conn.Close();
+            return successfulEdit;
+        }
+
+        #endregion
+
+        #region Update
+
+        protected bool editCourse(SqlCommand cmd) {
+
+            bool successfulEdit;
+
+            try {
+                connectDB();
+                conn.Open();
+                cmd.Connection = conn;
+                if (cmd.ExecuteNonQuery() > 0) {
+                    successfulEdit = true;
+                }
+                else {
+                    successfulEdit = false;
+                }
+            }
+            catch (SqlException error) {
+                throw error;
+            }
+
+            conn.Close();
+            return successfulEdit;
+        }
+
+        #endregion
 
         #region Delete
 
