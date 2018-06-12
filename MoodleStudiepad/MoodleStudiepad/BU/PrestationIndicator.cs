@@ -5,10 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using MoodleStudiepad.DAL;
 
-namespace MoodleStudiepad.BU
-{
-    public class PrestationIndicator
-    {
+namespace MoodleStudiepad.BU {
+    public class PrestationIndicator {
         public int studentId;
         public int courseId;
         public int piCode;
@@ -16,16 +14,14 @@ namespace MoodleStudiepad.BU
         public int weight;
         public float avgGrade;
 
-        public List<PrestationIndicator> getPrestationIndicators(int id)
-        {
+        public List<PrestationIndicator> getPrestationIndicators(int id) {
             // return list of prestation indicators
             QueryStrings queryStrings = new QueryStrings();
             List<PrestationIndicator> piList = queryStrings.getPrestationIndicatorsById(id);
             return piList;
         }
 
-        void getAverageGrades()
-        {
+        void getAverageGrades() {
             // return avgGrade
         }
 
