@@ -35,4 +35,5 @@ namespace MoodleStudiepad.BU
         //    Student singleStudent = queryStrings.getSingleStudentById(id);
         //    return singleStudent;
         //}
+    }
 }

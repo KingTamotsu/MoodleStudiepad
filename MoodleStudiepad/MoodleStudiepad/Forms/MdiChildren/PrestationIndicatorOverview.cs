@@ -15,13 +15,18 @@ namespace MoodleStudiepad.Forms.MdiChildren
 {
     public partial class PrestationIndicatorOverview : Form
     {
+        SeePrestationIndicators seePrestationIndicators = new SeePrestationIndicators();
+        List<PrestationIndicator> temp = new List<PrestationIndicator>();
+
         public PrestationIndicatorOverview()
         {
             InitializeComponent();
+            createListview();
+            fillListview();
+        }
 
-            SeePrestationIndicators seeAllCourses = new SeePrestationIndicators();
-            List<Course> temp = seeAllCourses.allCourses();
-
+        public void createListview()
+        {
             // Set the view to show details.
             listView1.View = View.Details;
             listView1.LabelEdit = false;
@@ -38,16 +43,15 @@ namespace MoodleStudiepad.Forms.MdiChildren
 
             listView1.Columns.Add("courseId");
             listView1.Columns.Add("name");
-            listView1.Columns.Add("courseCode");
-            listView1.Columns.Add("schoolYear");
-            listView1.Columns.Add("blockPeriod");
-            listView1.Columns.Add("credits");
-
-            foreach (Course item in temp)
+            listView1.Columns.Add("piCode");
+            listView1.Columns.Add("grade");
+        }
+        public void fillListview()
+        {
+            temp = seePrestationIndicators.getPrestationIndicators(2);
+            foreach (PrestationIndicator item in temp)
             {
-                listView1.Items.Add(new ListViewItem(new string[] { item.courseId.ToString(), item.name, item.courseCode, item.schoolYear.ToString(), item.blockPeriod.ToString(), item.credits.ToString() }));
-
-
+                listView1.Items.Add(new ListViewItem(new string[] { item.courseId.ToString(), item.piCode.ToString(), item.grade.ToString()}));
             }
         }
     }
