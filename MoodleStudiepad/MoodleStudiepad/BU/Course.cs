@@ -13,7 +13,7 @@ namespace MoodleStudiepad.BU
         public int schoolYear;
         public int blockPeriod;
         public int credits;
-
+        private bool successfulEdit;
 
 
         public List<Course> coursesByStudent(int id) {
@@ -26,6 +26,24 @@ namespace MoodleStudiepad.BU
             QueryStrings queryStrings = new QueryStrings();
             List<Course> allCourses = queryStrings.getAllCourses();
             return allCourses;
+        }
+
+        public bool addCourse(Course course) {
+            QueryStrings queryStrings = new QueryStrings();
+            string data = course.courseCode + "','" + course.name + "','" + course.schoolYear + "','" + course.blockPeriod + "','" + course.credits;
+            return queryStrings.addCourse(course, data);
+        }
+
+        public bool editCourse(Course course) {
+            QueryStrings queryStrings = new QueryStrings();
+            successfulEdit = queryStrings.editCourse(course);
+
+            if (successfulEdit) {
+                return true;
+            }
+            else {
+                return false;
+            }
         }
     }
 }

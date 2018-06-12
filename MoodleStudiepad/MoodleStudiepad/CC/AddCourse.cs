@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 using MoodleStudiepad.BU;
 
 namespace MoodleStudiepad.CC {
-    public class EditCourse {
-        public bool editCourse(Course editedCourse) {
+    public class AddCourse {
+        public bool addCourse(Course newCourse) {
             Course course = new Course();
-            return course.editCourse(editedCourse);
+            return course.addCourse(newCourse);
         }
-
     }
 }
