@@ -1,6 +1,6 @@
 ﻿namespace MoodleStudiepad.Forms.MdiChildren
 {
-    partial class SubscribedModuleOverview
+    partial class SubscribedCourseOverview
     {
         /// <summary>
         /// Required designer variable.
