@@ -44,7 +44,7 @@ namespace MoodleStudiepad.DAL {
 
         public List<PrestationIndicator> getAverageGradeById(int id)
         {
-            List<PrestationIndicator> readerList = dbConnection.SelectAverageGrades(new SqlCommand("SELECT stu.studentId, cou.courseId, (SUM(pre.grade*pre.weight)/SUM(pre.weight))AS avgGrade FROM Student stu, Course cou, PrestationIndicator pre WHERE stu.studentId = pre.studentId AND cou.courseId = pre.courseId AND stu.studentId = " + id + " GROUP BY stu.studentId, cou.courseId ORDER BY cou.courseId"));
+            List<PrestationIndicator> readerList = dbConnection.SelectAverageGrades(new SqlCommand("SELECT cou.courseId, ROUND(SUM(pre.grade*pre.weight)/SUM(pre.weight), 1) AS avgGrade FROM Student stu, Course cou, PrestationIndicator pre WHERE stu.studentId = pre.studentId AND cou.courseId = pre.courseId AND stu.studentId = " + id + " GROUP BY cou.courseId ORDER BY cou.courseId"));
             return readerList;
         }
 

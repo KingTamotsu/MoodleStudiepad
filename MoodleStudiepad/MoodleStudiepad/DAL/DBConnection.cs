@@ -232,12 +232,13 @@ namespace MoodleStudiepad.DAL {
                     {
                         prestationIndicator = new PrestationIndicator()
                         {
-                            studentId = reader.GetInt32(reader.GetOrdinal("studentId")),
                             courseId = reader.GetInt32(reader.GetOrdinal("courseId")),
                             avgGrade = reader.GetDecimal(reader.GetOrdinal("avgGrade"))
                         };
                     }
-
+                    // Remove excessive zeroes
+                    string zeroLess = prestationIndicator.avgGrade.ToString("N1");
+                    prestationIndicator.avgGrade = Decimal.Parse(zeroLess);
                     gradeList.Add(prestationIndicator);
                 }
             }
