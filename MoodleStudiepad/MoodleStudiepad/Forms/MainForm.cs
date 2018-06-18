@@ -38,9 +38,9 @@ namespace MoodleStudiepad.GUI {
 
         private void overzichtOnderwijseenhedenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SubscribedModuleOverview mdiSubscribedModuleOverview = new SubscribedModuleOverview();
-            mdiSubscribedModuleOverview.MdiParent = this;
-            mdiSubscribedModuleOverview.Show();
+            SubscribedCourseOverview mdiSubscribedCourseOverview = new SubscribedCourseOverview();
+            mdiSubscribedCourseOverview.MdiParent = this;
+            mdiSubscribedCourseOverview.Show();
         }
 
         /// <summary>

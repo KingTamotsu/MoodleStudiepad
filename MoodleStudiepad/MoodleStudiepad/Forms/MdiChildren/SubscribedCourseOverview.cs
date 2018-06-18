@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MoodleStudiepad.Forms.MdiChildren
 {
-    public partial class SubscribedModuleOverview : Form
+    public partial class SubscribedCourseOverview : Form
     {
-        public SubscribedModuleOverview()
+        public SubscribedCourseOverview()
         {
             InitializeComponent();
         }
