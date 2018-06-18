@@ -11,7 +11,7 @@ namespace MoodleStudiepad.DAL {
         protected SqlConnection conn;
 
         public SqlConnection connectDB() {
-            var connectionString = @"Data Source=moodlestudiepad.database.windows.net;" +
+            string connectionString = @"Data Source=moodlestudiepad.database.windows.net;" +
                                    "Initial Catalog=MoodleStudiepad;" + "User id=moodleadmin;" +
                                    "Password=#studiepad01;";
             conn = new SqlConnection(connectionString);
@@ -20,30 +20,30 @@ namespace MoodleStudiepad.DAL {
 
         #region DataMapperToList
 
-        public static List<T> DataReaderMapToList<T>(IDataReader dr) {
-            var list = new List<T>();
-            var obj = default(T);
-            while (dr.Read()) {
-                obj = Activator.CreateInstance<T>();
-                foreach (var prop in obj.GetType().GetProperties()) {
-                    Debug.Write(prop);
-                    if (!Equals(dr[prop.Name], DBNull.Value)) {
-                        prop.SetValue(obj, dr[prop.Name], null);
-                    }
-                }
+        //public static List<T> DataReaderMapToList<T>(IDataReader dr) {
+        //    var list = new List<T>();
+        //    var obj = default(T);
+        //    while (dr.Read()) {
+        //        obj = Activator.CreateInstance<T>();
+        //        foreach (var prop in obj.GetType().GetProperties()) {
+        //            Debug.Write(prop);
+        //            if (!Equals(dr[prop.Name], DBNull.Value)) {
+        //                prop.SetValue(obj, dr[prop.Name], null);
+        //            }
+        //        }
 
-                list.Add(obj);
-            }
+        //        list.Add(obj);
+        //    }
 
-            return list;
-        }
+        //    return list;
+        //}
 
         #endregion
 
 
         #region Get
 
-        protected UserAccount SelectSingleUser(SqlCommand cmd) {
+        public UserAccount SelectSingleUser(SqlCommand cmd) {
             UserAccount userAccount = new UserAccount();
 
             try {
@@ -74,7 +74,7 @@ namespace MoodleStudiepad.DAL {
             return userAccount;
         }
 
-        protected Student SelectSingleStudent(SqlCommand cmd) {
+        public Student SelectSingleStudent(SqlCommand cmd) {
             Student student = new Student();
 
 
@@ -106,7 +106,7 @@ namespace MoodleStudiepad.DAL {
             return student;
         }
 
-        protected List<Course> SelectCourseByStudentId(SqlCommand cmd) {
+        public List<Course> SelectCourseByStudentId(SqlCommand cmd) {
             Course course = new Course();
             List<Course> courseList = new List<Course>();
 
@@ -139,7 +139,7 @@ namespace MoodleStudiepad.DAL {
             return courseList;
         }
 
-        protected List<Course> SelectAllCourses(SqlCommand cmd) {
+        public List<Course> SelectAllCourses(SqlCommand cmd) {
             Course course = new Course();
             List<Course> courseList = new List<Course>();
 
@@ -174,7 +174,7 @@ namespace MoodleStudiepad.DAL {
         }
 
         // To do
-        protected List<PrestationIndicator> SelectPrestationIndicators(SqlCommand cmd)
+        public List<PrestationIndicator> SelectPrestationIndicators(SqlCommand cmd)
         {
             PrestationIndicator prestationIndicator = new PrestationIndicator();
             List<PrestationIndicator> piList = new List<PrestationIndicator>();
@@ -212,7 +212,7 @@ namespace MoodleStudiepad.DAL {
             return piList;
         }
 
-        protected List<PrestationIndicator> SelectAverageGrades(SqlCommand cmd)
+        public List<PrestationIndicator> SelectAverageGrades(SqlCommand cmd)
         {
             PrestationIndicator prestationIndicator = new PrestationIndicator();
             List<PrestationIndicator> gradeList = new List<PrestationIndicator>();
@@ -251,11 +251,9 @@ namespace MoodleStudiepad.DAL {
 
         #endregion
 
-        //Dit word maar 1 method genaamt execute die je kunt gebruiken voor alle classes om objecten toe te voegen.
-
         #region Add
-
-        protected bool execute(SqlCommand cmd) {
+        //Dit word maar 1 method genaamt execute die je kunt gebruiken voor alle classes om objecten toe te voegen.
+        public bool execute(SqlCommand cmd) {
             bool successfulEdit;
 
             try {
@@ -281,7 +279,7 @@ namespace MoodleStudiepad.DAL {
 
         #region Update
 
-        protected bool editCourse(SqlCommand cmd) {
+        public bool editCourse(SqlCommand cmd) {
 
             bool successfulEdit;
 
