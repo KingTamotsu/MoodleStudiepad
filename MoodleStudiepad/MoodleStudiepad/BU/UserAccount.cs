@@ -36,5 +36,12 @@ namespace MoodleStudiepad.BU
             return user.username;
         }
 
+        public int returnUserId(string username) {
+            QueryStrings queryStrings = new QueryStrings();
+            UserAccount user = new UserAccount();
+            user = queryStrings.selectSingleUser(username);
+            return user.userId;
+        }
+
     }
 }

@@ -35,8 +35,8 @@
             this.debuggingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.debug1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.coursesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tempToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.coursesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblName = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
@@ -87,6 +87,7 @@
             this.inschrijvenToolStripMenuItem.Name = "inschrijvenToolStripMenuItem";
             this.inschrijvenToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.inschrijvenToolStripMenuItem.Text = "Subscribe to module";
+            this.inschrijvenToolStripMenuItem.Click += new System.EventHandler(this.inschrijvenToolStripMenuItem_Click);
             // 
             // uitschrijvenToolStripMenuItem
             // 
@@ -138,17 +139,17 @@
             this.personalToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.personalToolStripMenuItem.Text = "Personal";
             // 
-            // coursesToolStripMenuItem
-            // 
-            this.coursesToolStripMenuItem.Name = "coursesToolStripMenuItem";
-            this.coursesToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
-            // 
             // tempToolStripMenuItem
             // 
             this.tempToolStripMenuItem.Name = "tempToolStripMenuItem";
             this.tempToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.tempToolStripMenuItem.Text = "Temp";
             this.tempToolStripMenuItem.Click += new System.EventHandler(this.tempToolStripMenuItem_Click);
+            // 
+            // coursesToolStripMenuItem
+            // 
+            this.coursesToolStripMenuItem.Name = "coursesToolStripMenuItem";
+            this.coursesToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
             // 
             // logoutToolStripMenuItem
             // 

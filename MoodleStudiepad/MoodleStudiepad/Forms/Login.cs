@@ -27,9 +27,10 @@ namespace MoodleStudiepad {
 
                 if (checkUser) {
                     CheckUser checkUser = new CheckUser();
-                    string user = checkUser.returnUsername2(tbUsername.Text);
+                    int id = checkUser.returnUserId(tbUsername.Text);
+                    string username = checkUser.returnUsername(tbUsername.Text);
                     MessageBox.Show("You are succesfully logged in!");
-                    MainForm mainForm = new MainForm(user);
+                    MainForm mainForm = new MainForm(id, username);
                     mainForm.Show();
                     Hide();
                 }
