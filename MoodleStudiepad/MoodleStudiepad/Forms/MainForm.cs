@@ -10,13 +10,15 @@ using System.Windows.Forms;
 using MoodleStudiepad.BU;
 using MoodleStudiepad.CC;
 using MoodleStudiepad.Forms.MdiChildren;
+using SubscribeToCourse = MoodleStudiepad.Forms.MdiChildren.SubscribeToCourse;
 
 namespace MoodleStudiepad.GUI {
     public partial class MainForm : Form {
-
-        public MainForm(string username) {
+        private int userId;
+        public MainForm(int id, string username) {
             InitializeComponent();
             lblName.Text = username;
+            userId = id;
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e) {
@@ -76,10 +78,15 @@ namespace MoodleStudiepad.GUI {
             mdiCreditOverview.MdiParent = this;
             mdiCreditOverview.Show();
         }
+
+
+
         #endregion
 
-
-
-
+        private void inschrijvenToolStripMenuItem_Click(object sender, EventArgs e) {
+            SubscribeToCourse mdiSubscribeToCourse = new SubscribeToCourse(userId);
+            mdiSubscribeToCourse.MdiParent = this;
+            mdiSubscribeToCourse.Show();
+        }
     }
 }

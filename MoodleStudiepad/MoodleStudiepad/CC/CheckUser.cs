@@ -5,7 +5,7 @@ using MoodleStudiepad.BU;
 
 namespace MoodleStudiepad.CC
 {
-    public class CheckUser{
+    public class CheckUser {
 
         public bool checkUserOnLogin(string username, string password) {
             UserAccount userAccount = new UserAccount();
@@ -13,16 +13,22 @@ namespace MoodleStudiepad.CC
 
             if (userAccount.checkUser(username, password)) {
                 return true;
-            } else {
+            }
+            else {
                 return false;
             }
         }
 
-        public string returnUsername2 (string username)
-        {
+        public string returnUsername(string username) {
             UserAccount userAccount = new UserAccount();
             string user = userAccount.returnUsername(username);
             return user;
+        }
+
+        public int returnUserId(string username) {
+            UserAccount userAccount = new UserAccount();
+            int userId = userAccount.returnUserId(username);
+            return userId;
         }
     }
 }
