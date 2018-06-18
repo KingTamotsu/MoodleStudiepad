@@ -250,6 +250,40 @@ namespace MoodleStudiepad.DAL {
             return gradeList;
         }
 
+        public List<Course> getNonSubscribedCourses(SqlCommand cmd) {
+            Course course = new Course();
+            List<Course> courseList = new List<Course>();
+
+            try {
+                connectDB();
+                conn.Open();
+                cmd.Connection = conn;
+                SqlDataReader reader = cmd.ExecuteReader();
+                DataTable schemaTable = reader.GetSchemaTable();
+
+
+                while (reader.Read()) {
+                    foreach (DataRow row in schemaTable.Rows) {
+                        course = new Course() {
+                            courseId = reader.GetInt32(reader.GetOrdinal("courseId")),
+                            name = reader.GetString(reader.GetOrdinal("name")),
+                            courseCode = reader.GetString(reader.GetOrdinal("courseCode")),
+                            credits = reader.GetInt32(reader.GetOrdinal("credits")),
+                            schoolYear = reader.GetInt32(reader.GetOrdinal("schoolYear")),
+                            blockPeriod = reader.GetInt32(reader.GetOrdinal("blockPeriod"))
+                        };
+                    }
+
+                    courseList.Add(course);
+                }
+            }
+            catch (System.Data.SqlClient.SqlException error) {
+                throw error;
+            }
+            this.conn.Close();
+            return courseList;
+        }
+
         #endregion
 
         #region Add

@@ -28,6 +28,12 @@ namespace MoodleStudiepad.BU
             return allCourses;
         }
 
+        public List<Course> getNonSubscribedCourses(int id) {
+            QueryStrings queryStrings = new QueryStrings();
+            List<Course> allCourses = queryStrings.getNonSubscribedCourses(id);
+            return allCourses;
+        }
+
         public bool addCourse(Course course) {
             QueryStrings queryStrings = new QueryStrings();
             string data = course.courseCode + "','" + course.name + "','" + course.schoolYear + "','" + course.blockPeriod + "','" + course.credits;

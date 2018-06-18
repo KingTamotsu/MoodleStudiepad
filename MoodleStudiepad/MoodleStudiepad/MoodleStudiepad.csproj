@@ -56,7 +56,7 @@
     <Compile Include="CC\EditCourse.cs" />
     <Compile Include="CC\EditStudent.cs" />
     <Compile Include="CC\SeeAllCourses.cs" />
-    <Compile Include="CC\SubscribeToCourse.cs" />
+    <Compile Include="CC\SubscribeToNonSubscribedCourse.cs" />
     <Compile Include="CC\SeeContactDetailsStudent.cs" />
     <Compile Include="CC\SeeCredits.cs" />
     <Compile Include="CC\SendData.cs" />
