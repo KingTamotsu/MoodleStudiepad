@@ -9,7 +9,7 @@ namespace MoodleStudiepad.BU
         public int userId;
         public string username;
         public string password;
-        public string role;
+        public int roleId;
 
         public bool checkUser(string username, string password) {
             QueryStrings queryStrings = new QueryStrings();
@@ -43,5 +43,11 @@ namespace MoodleStudiepad.BU
             return user.userId;
         }
 
+        public int returnRoleId(string username) {
+            QueryStrings queryStrings = new QueryStrings();
+            UserAccount user = new UserAccount();
+            user = queryStrings.selectSingleUser(username);
+            return user.roleId;
+        }
     }
 }

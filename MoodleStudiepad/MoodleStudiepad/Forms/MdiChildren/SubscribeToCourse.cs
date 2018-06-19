@@ -17,9 +17,8 @@ namespace MoodleStudiepad.Forms.MdiChildren {
         private int id;
         public SubscribeToCourse(int id) {
             InitializeComponent();
-            //this.id = id;
+            this.id = id;
             fillListCheckbox();
-            this.id = 3;
         }
 
         public void fillListCheckbox() {

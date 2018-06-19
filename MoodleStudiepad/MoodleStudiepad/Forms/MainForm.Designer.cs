@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.logOut2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -32,8 +33,6 @@
             this.resultatenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.debuggingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.debug1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tempToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.coursesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +47,6 @@
             this.logOut2ToolStripMenuItem,
             this.studieToolStripMenuItem,
             this.resultatenToolStripMenuItem,
-            this.debuggingToolStripMenuItem,
             this.personalToolStripMenuItem,
             this.tempToolStripMenuItem,
             this.coursesToolStripMenuItem});
@@ -60,8 +58,9 @@
             // 
             // logOut2ToolStripMenuItem
             // 
+            this.logOut2ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("logOut2ToolStripMenuItem.Image")));
             this.logOut2ToolStripMenuItem.Name = "logOut2ToolStripMenuItem";
-            this.logOut2ToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.logOut2ToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.logOut2ToolStripMenuItem.Text = "Log out";
             this.logOut2ToolStripMenuItem.Click += new System.EventHandler(this.logOut2ToolStripMenuItem_Click);
             // 
@@ -118,21 +117,6 @@
             this.eCToolStripMenuItem.Text = "EC";
             this.eCToolStripMenuItem.Click += new System.EventHandler(this.eCToolStripMenuItem_Click);
             // 
-            // debuggingToolStripMenuItem
-            // 
-            this.debuggingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.debug1ToolStripMenuItem});
-            this.debuggingToolStripMenuItem.Name = "debuggingToolStripMenuItem";
-            this.debuggingToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
-            this.debuggingToolStripMenuItem.Text = "Debugging";
-            // 
-            // debug1ToolStripMenuItem
-            // 
-            this.debug1ToolStripMenuItem.Name = "debug1ToolStripMenuItem";
-            this.debug1ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.debug1ToolStripMenuItem.Text = "Debug 1";
-            this.debug1ToolStripMenuItem.Click += new System.EventHandler(this.debug1ToolStripMenuItem_Click);
-            // 
             // personalToolStripMenuItem
             // 
             this.personalToolStripMenuItem.Name = "personalToolStripMenuItem";
@@ -142,8 +126,8 @@
             // tempToolStripMenuItem
             // 
             this.tempToolStripMenuItem.Name = "tempToolStripMenuItem";
-            this.tempToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.tempToolStripMenuItem.Text = "Temp";
+            this.tempToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.tempToolStripMenuItem.Text = "Courses";
             this.tempToolStripMenuItem.Click += new System.EventHandler(this.tempToolStripMenuItem_Click);
             // 
             // coursesToolStripMenuItem
@@ -159,11 +143,11 @@
             // lblName
             // 
             this.lblName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblName.Location = new System.Drawing.Point(591, 5);
+            this.lblName.Location = new System.Drawing.Point(529, 5);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(197, 14);
             this.lblName.TabIndex = 2;
-            this.lblName.Text = "Bob Bobberton";
+            this.lblName.Text = "Username";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // MainForm
@@ -194,8 +178,6 @@
         private System.Windows.Forms.ToolStripMenuItem studieToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inschrijvenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem uitschrijvenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem debuggingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem debug1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem overzichtOnderwijseenhedenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem resultatenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pIToolStripMenuItem;

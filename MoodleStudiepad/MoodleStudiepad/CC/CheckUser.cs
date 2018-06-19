@@ -30,5 +30,11 @@ namespace MoodleStudiepad.CC
             int userId = userAccount.returnUserId(username);
             return userId;
         }
+
+        public int returnRoleId(string username) {
+            UserAccount userAccount = new UserAccount();
+            int roleId = userAccount.returnRoleId(username);
+            return roleId;
+        }
     }
 }

@@ -37,7 +37,7 @@ namespace MoodleStudiepad.DAL {
                             userId = reader.GetInt32(reader.GetOrdinal("userId")),
                             username = reader.GetString(reader.GetOrdinal("username")),
                             password = reader.GetString(reader.GetOrdinal("password")),
-                            role = reader.GetString(reader.GetOrdinal("name"))
+                            roleId = reader.GetInt32(reader.GetOrdinal("roleId"))
                         };
                     }
                 }

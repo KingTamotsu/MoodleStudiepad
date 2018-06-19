@@ -110,12 +110,6 @@
     <Compile Include="Forms\MdiChildren\CreditOverview.Designer.cs">
       <DependentUpon>CreditOverview.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MdiChildren\MdiDebuggingForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MdiChildren\MdiDebuggingForm.Designer.cs">
-      <DependentUpon>MdiDebuggingForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\MdiChildren\PrestationIndicatorOverview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,9 +147,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MdiChildren\CreditOverview.resx">
       <DependentUpon>CreditOverview.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MdiChildren\MdiDebuggingForm.resx">
-      <DependentUpon>MdiDebuggingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MdiChildren\PrestationIndicatorOverview.resx">
       <DependentUpon>PrestationIndicatorOverview.cs</DependentUpon>

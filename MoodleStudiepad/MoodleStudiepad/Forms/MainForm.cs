@@ -10,15 +10,33 @@ using System.Windows.Forms;
 using MoodleStudiepad.BU;
 using MoodleStudiepad.CC;
 using MoodleStudiepad.Forms.MdiChildren;
-using SubscribeToCourse = MoodleStudiepad.Forms.MdiChildren.SubscribeToCourse;
 
 namespace MoodleStudiepad.GUI {
     public partial class MainForm : Form {
         private int userId;
-        public MainForm(int id, string username) {
+        private int roleId;
+        public MainForm(int id, string username, int roleId) {
             InitializeComponent();
             lblName.Text = username;
             userId = id;
+            roleId = 1;
+            this.roleId = roleId;
+            checkRoleId();
+        }
+
+
+        public void checkRoleId() {
+            if (roleId != 1) {
+                studieToolStripMenuItem.Visible = false;
+                resultatenToolStripMenuItem.Visible = false;
+                personalToolStripMenuItem.Visible = false;
+            }
+            if (roleId != 2) {
+                
+            }
+            if (roleId != 3) {
+                tempToolStripMenuItem.Visible = false;
+            }
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e) {
@@ -26,17 +44,7 @@ namespace MoodleStudiepad.GUI {
             loginForm.Show();
         }
 
-        #region Toolstrip Buttons
-        /// <summary>
-        /// Mdi child form testing. Follow this template to create more mdi children. Stored child forms are in Forms/MdiChildren/.
-        /// You should rename mdiDebuggingForm to the child's name. Hide the 'Debugging' toolstrip later when done!
-        /// </summary>
-        private void debug1ToolStripMenuItem_Click(object sender, EventArgs e)                              // Start method by clicking on the toolstrip button
-        {                                                                                                   //
-            MdiDebuggingForm mdiDebuggingForm = new MdiDebuggingForm();                                     // Make new instance of the form MdiDebuggingForm.cs
-            mdiDebuggingForm.MdiParent = this;                                                              // Set parent form to this form (MainForm.cs)
-            mdiDebuggingForm.Show();                                                                        // Show the child form
-        }                                                                                                   //
+        #region Toolstrip Buttons                                                                                                 //
 
         private void overzichtOnderwijseenhedenToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -54,10 +62,6 @@ namespace MoodleStudiepad.GUI {
             if (logoutConfirmation == DialogResult.Yes)
             {
                 this.Close();
-            }
-            else
-            {
-                // do nothing.
             }
         }
 
@@ -78,9 +82,6 @@ namespace MoodleStudiepad.GUI {
             mdiCreditOverview.MdiParent = this;
             mdiCreditOverview.Show();
         }
-
-
-
         #endregion
 
         private void inschrijvenToolStripMenuItem_Click(object sender, EventArgs e) {
