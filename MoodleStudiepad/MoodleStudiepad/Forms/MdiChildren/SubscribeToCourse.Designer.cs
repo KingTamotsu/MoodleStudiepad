@@ -34,6 +34,7 @@
             this.cLBNonSubscribedCoureses.Name = "cLBNonSubscribedCoureses";
             this.cLBNonSubscribedCoureses.Size = new System.Drawing.Size(290, 259);
             this.cLBNonSubscribedCoureses.TabIndex = 0;
+            this.cLBNonSubscribedCoureses.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cLBNonSubscribedCoureses_ItemCheck);
             // 
             // btnSubscribe
             // 
@@ -43,6 +44,7 @@
             this.btnSubscribe.TabIndex = 1;
             this.btnSubscribe.Text = "Subscribe";
             this.btnSubscribe.UseVisualStyleBackColor = true;
+            this.btnSubscribe.Click += new System.EventHandler(this.btnSubscribe_Click);
             // 
             // SubscribeToCourse
             // 

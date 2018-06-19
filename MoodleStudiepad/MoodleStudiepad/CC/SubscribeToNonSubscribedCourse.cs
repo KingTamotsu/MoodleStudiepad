@@ -14,5 +14,10 @@ namespace MoodleStudiepad.CC
             List<Course> allCourses = course.getNonSubscribedCourses(id);
             return allCourses;
         }
+
+        public bool subscribeToNonSubscribedCourse(int courseId, int studentId) {
+            Course course = new Course();
+            return course.subscribeToNonSubscribedCourse(courseId, studentId);
+        }
     }
 }

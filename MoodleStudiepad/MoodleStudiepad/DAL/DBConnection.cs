@@ -18,29 +18,6 @@ namespace MoodleStudiepad.DAL {
             return conn;
         }
 
-        #region DataMapperToList
-
-        //public static List<T> DataReaderMapToList<T>(IDataReader dr) {
-        //    var list = new List<T>();
-        //    var obj = default(T);
-        //    while (dr.Read()) {
-        //        obj = Activator.CreateInstance<T>();
-        //        foreach (var prop in obj.GetType().GetProperties()) {
-        //            Debug.Write(prop);
-        //            if (!Equals(dr[prop.Name], DBNull.Value)) {
-        //                prop.SetValue(obj, dr[prop.Name], null);
-        //            }
-        //        }
-
-        //        list.Add(obj);
-        //    }
-
-        //    return list;
-        //}
-
-        #endregion
-
-
         #region Get
 
         public UserAccount SelectSingleUser(SqlCommand cmd) {
@@ -173,7 +150,6 @@ namespace MoodleStudiepad.DAL {
             return courseList;
         }
 
-        // To do
         public List<PrestationIndicator> SelectPrestationIndicators(SqlCommand cmd)
         {
             PrestationIndicator prestationIndicator = new PrestationIndicator();

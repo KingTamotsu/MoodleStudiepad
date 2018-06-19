@@ -35,5 +35,18 @@ namespace MoodleStudiepad.Forms.MdiChildren {
                 cLBNonSubscribedCoureses.Items.Add(completeCourse);
             }
         }
+
+        private void btnSubscribe_Click(object sender, EventArgs e) {
+            SubscribeToNonSubscribedCourse subscribeToNonSubscribedCourse = new SubscribeToNonSubscribedCourse();
+            subscribeToNonSubscribedCourse.subscribeToNonSubscribedCourse(
+                allCourses[cLBNonSubscribedCoureses.SelectedIndex].courseId, id);
+            cLBNonSubscribedCoureses.Items.Clear();
+            fillListCheckbox();
+        }
+
+        private void cLBNonSubscribedCoureses_ItemCheck(object sender, ItemCheckEventArgs e) {
+            for (int ix = 0; ix < cLBNonSubscribedCoureses.Items.Count; ++ix)
+                if (ix != e.Index) cLBNonSubscribedCoureses.SetItemChecked(ix, false);
+        }
     }
 }

@@ -51,5 +51,10 @@ namespace MoodleStudiepad.BU
                 return false;
             }
         }
+
+        public bool subscribeToNonSubscribedCourse(int courseId, int studentId) {
+            QueryStrings queryStrings = new QueryStrings();
+            return queryStrings.addStudentToCourse(courseId, studentId);
+        }
     }
 }

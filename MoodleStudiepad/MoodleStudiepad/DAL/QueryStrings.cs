@@ -70,6 +70,10 @@ namespace MoodleStudiepad.DAL {
             return dbConnection.execute(new SqlCommand("INSERT into Course (courseCode, name , schoolYear, blockPeriod, credits) VALUES ('" + data + "')"));
         }
 
+        public bool addStudentToCourse(int courseId, int studentId) {
+            return dbConnection.execute(new SqlCommand("INSERT INTO StudentCourse (courseId, studentId) VALUES (" + courseId + "," + studentId +")"));
+        }
+
         #endregion
 
         #region Update
@@ -77,9 +81,6 @@ namespace MoodleStudiepad.DAL {
         public bool editCourse(Course course) {
             return dbConnection.editCourse(new SqlCommand("UPDATE Course SET courseCode = '"+ course.courseCode + "' , name ='" + course.name + "', schoolYear = " + course.schoolYear + ", blockPeriod = " + course.blockPeriod + ", credits = " + course.credits + " WHERE courseId = " + course.courseId +";"));
         }
-
-
-
         #endregion
     }
 }
