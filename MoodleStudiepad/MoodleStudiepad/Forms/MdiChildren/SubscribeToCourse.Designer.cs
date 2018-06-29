@@ -25,12 +25,13 @@
         private void InitializeComponent() {
             this.cLBNonSubscribedCoureses = new System.Windows.Forms.CheckedListBox();
             this.btnSubscribe = new System.Windows.Forms.Button();
+            this.lb_available = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cLBNonSubscribedCoureses
             // 
             this.cLBNonSubscribedCoureses.FormattingEnabled = true;
-            this.cLBNonSubscribedCoureses.Location = new System.Drawing.Point(12, 108);
+            this.cLBNonSubscribedCoureses.Location = new System.Drawing.Point(12, 28);
             this.cLBNonSubscribedCoureses.Name = "cLBNonSubscribedCoureses";
             this.cLBNonSubscribedCoureses.Size = new System.Drawing.Size(290, 259);
             this.cLBNonSubscribedCoureses.TabIndex = 0;
@@ -38,24 +39,38 @@
             // 
             // btnSubscribe
             // 
-            this.btnSubscribe.Location = new System.Drawing.Point(12, 391);
+            this.btnSubscribe.Location = new System.Drawing.Point(12, 293);
             this.btnSubscribe.Name = "btnSubscribe";
-            this.btnSubscribe.Size = new System.Drawing.Size(75, 23);
+            this.btnSubscribe.Size = new System.Drawing.Size(290, 23);
             this.btnSubscribe.TabIndex = 1;
             this.btnSubscribe.Text = "Subscribe";
             this.btnSubscribe.UseVisualStyleBackColor = true;
             this.btnSubscribe.Click += new System.EventHandler(this.btnSubscribe_Click);
             // 
+            // lb_available
+            // 
+            this.lb_available.AutoSize = true;
+            this.lb_available.ForeColor = System.Drawing.Color.White;
+            this.lb_available.Location = new System.Drawing.Point(12, 12);
+            this.lb_available.Name = "lb_available";
+            this.lb_available.Size = new System.Drawing.Size(93, 13);
+            this.lb_available.TabIndex = 2;
+            this.lb_available.Text = "Available courses:";
+            // 
             // SubscribeToCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Red;
+            this.ClientSize = new System.Drawing.Size(316, 326);
+            this.Controls.Add(this.lb_available);
             this.Controls.Add(this.btnSubscribe);
             this.Controls.Add(this.cLBNonSubscribedCoureses);
             this.Name = "SubscribeToCourse";
-            this.Text = "SubscribeToCourse";
+            this.ShowIcon = false;
+            this.Text = "Course subscription";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -63,5 +78,6 @@
 
         private System.Windows.Forms.CheckedListBox cLBNonSubscribedCoureses;
         private System.Windows.Forms.Button btnSubscribe;
+        private System.Windows.Forms.Label lb_available;
     }
 }

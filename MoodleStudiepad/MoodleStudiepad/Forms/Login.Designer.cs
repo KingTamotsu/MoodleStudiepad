@@ -33,6 +33,7 @@
             // lbUsername
             // 
             this.lbUsername.AutoSize = true;
+            this.lbUsername.ForeColor = System.Drawing.Color.White;
             this.lbUsername.Location = new System.Drawing.Point(2, 9);
             this.lbUsername.Name = "lbUsername";
             this.lbUsername.Size = new System.Drawing.Size(55, 13);
@@ -42,6 +43,7 @@
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
+            this.lbPassword.ForeColor = System.Drawing.Color.White;
             this.lbPassword.Location = new System.Drawing.Point(2, 32);
             this.lbPassword.Name = "lbPassword";
             this.lbPassword.Size = new System.Drawing.Size(53, 13);
@@ -65,12 +67,14 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnLogin.Location = new System.Drawing.Point(75, 61);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // Login
@@ -78,6 +82,7 @@
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(226, 96);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.tbPassword);
@@ -89,7 +94,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
-            this.Text = "Moodle Studiepad";
+            this.ShowIcon = false;
+            this.Text = "MS - Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();

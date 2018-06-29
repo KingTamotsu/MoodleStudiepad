@@ -65,12 +65,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(431, 218);
             this.Controls.Add(this.bt_avgPi);
             this.Controls.Add(this.bt_indivPi);
             this.Controls.Add(this.listView1);
             this.Name = "PrestationIndicatorOverview";
-            this.Text = "PI";
+            this.ShowIcon = false;
+            this.Text = "Prestation Indicators";
             this.ResumeLayout(false);
 
         }

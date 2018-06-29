@@ -39,17 +39,21 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(41, 156);
+            this.btnSave.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSave.Location = new System.Drawing.Point(69, 155);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Red;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(18, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
@@ -59,6 +63,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Red;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(18, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
@@ -68,6 +74,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Red;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(18, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 13);
@@ -77,6 +85,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Red;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(18, 96);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 13);
@@ -86,6 +96,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Red;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(18, 122);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 13);
@@ -130,7 +142,7 @@
             // lbCourseId
             // 
             this.lbCourseId.AutoSize = true;
-            this.lbCourseId.Location = new System.Drawing.Point(156, 173);
+            this.lbCourseId.Location = new System.Drawing.Point(177, 160);
             this.lbCourseId.Name = "lbCourseId";
             this.lbCourseId.Size = new System.Drawing.Size(18, 13);
             this.lbCourseId.TabIndex = 11;
@@ -141,7 +153,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(215, 198);
+            this.BackColor = System.Drawing.Color.Red;
+            this.ClientSize = new System.Drawing.Size(215, 188);
             this.Controls.Add(this.lbCourseId);
             this.Controls.Add(this.tbCredits);
             this.Controls.Add(this.tbBlockPeriod);
@@ -154,8 +167,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSave);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "AllCoursesEdit";
-            this.Text = "AllCoursedEdit";
+            this.ShowIcon = false;
+            this.Text = "Edit course";
             this.ResumeLayout(false);
             this.PerformLayout();
 
