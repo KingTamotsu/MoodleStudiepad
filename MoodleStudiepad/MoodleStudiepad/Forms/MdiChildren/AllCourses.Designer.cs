@@ -30,7 +30,7 @@
             // 
             // listView1
             // 
-            this.listView1.Location = new System.Drawing.Point(36, 41);
+            this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(467, 184);
             this.listView1.TabIndex = 0;
@@ -38,34 +38,38 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(559, 54);
+            this.btnEdit.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEdit.Location = new System.Drawing.Point(485, 12);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(559, 104);
+            this.btnAdd.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAdd.Location = new System.Drawing.Point(485, 41);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // AllCourses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Red;
+            this.ClientSize = new System.Drawing.Size(569, 207);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.listView1);
             this.Name = "AllCourses";
-            this.Text = "AllCourses";
+            this.ShowIcon = false;
+            this.Text = "Courses";
             this.ResumeLayout(false);
 
         }

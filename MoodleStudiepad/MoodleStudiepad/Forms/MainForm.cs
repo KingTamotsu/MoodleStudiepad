@@ -19,20 +19,20 @@ namespace MoodleStudiepad.GUI {
             InitializeComponent();
             lblName.Text = username;
             userId = id;
-            roleId = 1;
             this.roleId = roleId;
             checkRoleId();
         }
 
-
         public void checkRoleId() {
+
+            eCToolStripMenuItem.Visible = false;
+            overzichtOnderwijseenhedenToolStripMenuItem.Visible = false;
+            uitschrijvenToolStripMenuItem.Visible = false;
+            personalToolStripMenuItem.Visible = false;
+
             if (roleId != 1) {
                 studieToolStripMenuItem.Visible = false;
                 resultatenToolStripMenuItem.Visible = false;
-                personalToolStripMenuItem.Visible = false;
-            }
-            if (roleId != 2) {
-                
             }
             if (roleId != 3) {
                 tempToolStripMenuItem.Visible = false;
@@ -44,7 +44,14 @@ namespace MoodleStudiepad.GUI {
             loginForm.Show();
         }
 
-        #region Toolstrip Buttons                                                                                                 //
+        private void inschrijvenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SubscribeToCourse mdiSubscribeToCourse = new SubscribeToCourse(userId);
+            mdiSubscribeToCourse.MdiParent = this;
+            mdiSubscribeToCourse.Show();
+        }
+
+        #region Toolstrip Buttons
 
         private void overzichtOnderwijseenhedenToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -84,10 +91,145 @@ namespace MoodleStudiepad.GUI {
         }
         #endregion
 
-        private void inschrijvenToolStripMenuItem_Click(object sender, EventArgs e) {
-            SubscribeToCourse mdiSubscribeToCourse = new SubscribeToCourse(userId);
-            mdiSubscribeToCourse.MdiParent = this;
-            mdiSubscribeToCourse.Show();
+        #region Mouseover colours
+        private bool studieDropdown = false;
+        private bool resultDropdown = false;
+
+        private void logOut2ToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            logOut2ToolStripMenuItem.ForeColor = Color.Black;
         }
+
+        private void logOut2ToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            logOut2ToolStripMenuItem.ForeColor = Color.White;
+        }
+
+        private void studieToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            if (!studieDropdown)
+            {
+                studieToolStripMenuItem.ForeColor = Color.Black;
+            }
+        }
+
+        private void studieToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            if (!studieDropdown)
+            {
+                studieToolStripMenuItem.ForeColor = Color.White;
+            }
+        }
+
+        private void studieToolStripMenuItem_DropDownOpened(object sender, EventArgs e)
+        {
+            studieDropdown = true;
+            studieToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void studieToolStripMenuItem_DropDownClosed(object sender, EventArgs e)
+        {
+            studieDropdown = false;
+            studieToolStripMenuItem.ForeColor = Color.White;
+        }
+
+        private void resultatenToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            if (!resultDropdown)
+            {
+                resultatenToolStripMenuItem.ForeColor = Color.Black;
+            }
+        }
+
+        private void resultatenToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            if (!resultDropdown)
+            {
+                resultatenToolStripMenuItem.ForeColor = Color.White;
+            }
+        }
+
+        private void resultatenToolStripMenuItem_DropDownOpened(object sender, EventArgs e)
+        {
+            resultDropdown = true;
+            resultatenToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void resultatenToolStripMenuItem_DropDownClosed(object sender, EventArgs e)
+        {
+            resultDropdown = false;
+            resultatenToolStripMenuItem.ForeColor = Color.White;
+        }
+
+        private void overzichtOnderwijseenhedenToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            overzichtOnderwijseenhedenToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void overzichtOnderwijseenhedenToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            overzichtOnderwijseenhedenToolStripMenuItem.ForeColor = Color.White;
+        }
+
+        private void inschrijvenToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            inschrijvenToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void inschrijvenToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            inschrijvenToolStripMenuItem.ForeColor = Color.White;
+        }
+
+        private void uitschrijvenToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            uitschrijvenToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void uitschrijvenToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            uitschrijvenToolStripMenuItem.ForeColor = Color.White;
+        }
+
+        private void pIToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            pIToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void pIToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            pIToolStripMenuItem.ForeColor = Color.White;
+        }
+
+        private void eCToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            eCToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void eCToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            eCToolStripMenuItem.ForeColor = Color.White;
+        }
+
+        private void personalToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            personalToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void personalToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            personalToolStripMenuItem.ForeColor = Color.White;
+        }
+
+        private void tempToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            tempToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void tempToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            tempToolStripMenuItem.ForeColor = Color.White;
+        }
+        #endregion
     }
 }
