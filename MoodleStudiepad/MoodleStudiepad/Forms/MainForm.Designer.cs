@@ -90,7 +90,7 @@
             this.overzichtOnderwijseenhedenToolStripMenuItem.BackColor = System.Drawing.Color.Red;
             this.overzichtOnderwijseenhedenToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.overzichtOnderwijseenhedenToolStripMenuItem.Name = "overzichtOnderwijseenhedenToolStripMenuItem";
-            this.overzichtOnderwijseenhedenToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.overzichtOnderwijseenhedenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.overzichtOnderwijseenhedenToolStripMenuItem.Text = "Module overview";
             this.overzichtOnderwijseenhedenToolStripMenuItem.Click += new System.EventHandler(this.overzichtOnderwijseenhedenToolStripMenuItem_Click);
             this.overzichtOnderwijseenhedenToolStripMenuItem.MouseEnter += new System.EventHandler(this.overzichtOnderwijseenhedenToolStripMenuItem_MouseEnter);
@@ -101,8 +101,8 @@
             this.inschrijvenToolStripMenuItem.BackColor = System.Drawing.Color.Red;
             this.inschrijvenToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.inschrijvenToolStripMenuItem.Name = "inschrijvenToolStripMenuItem";
-            this.inschrijvenToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.inschrijvenToolStripMenuItem.Text = "Subscribe to module";
+            this.inschrijvenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inschrijvenToolStripMenuItem.Text = "Subscribe to course";
             this.inschrijvenToolStripMenuItem.Click += new System.EventHandler(this.inschrijvenToolStripMenuItem_Click);
             this.inschrijvenToolStripMenuItem.MouseEnter += new System.EventHandler(this.inschrijvenToolStripMenuItem_MouseEnter);
             this.inschrijvenToolStripMenuItem.MouseLeave += new System.EventHandler(this.inschrijvenToolStripMenuItem_MouseLeave);
@@ -112,7 +112,7 @@
             this.uitschrijvenToolStripMenuItem.BackColor = System.Drawing.Color.Red;
             this.uitschrijvenToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.uitschrijvenToolStripMenuItem.Name = "uitschrijvenToolStripMenuItem";
-            this.uitschrijvenToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.uitschrijvenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.uitschrijvenToolStripMenuItem.Text = "Stop education";
             this.uitschrijvenToolStripMenuItem.MouseEnter += new System.EventHandler(this.uitschrijvenToolStripMenuItem_MouseEnter);
             this.uitschrijvenToolStripMenuItem.MouseLeave += new System.EventHandler(this.uitschrijvenToolStripMenuItem_MouseLeave);
@@ -136,7 +136,7 @@
             this.pIToolStripMenuItem.BackColor = System.Drawing.Color.Red;
             this.pIToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.pIToolStripMenuItem.Name = "pIToolStripMenuItem";
-            this.pIToolStripMenuItem.Size = new System.Drawing.Size(88, 22);
+            this.pIToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pIToolStripMenuItem.Text = "PI";
             this.pIToolStripMenuItem.Click += new System.EventHandler(this.pIToolStripMenuItem_Click);
             this.pIToolStripMenuItem.MouseEnter += new System.EventHandler(this.pIToolStripMenuItem_MouseEnter);
@@ -147,7 +147,7 @@
             this.eCToolStripMenuItem.BackColor = System.Drawing.Color.Red;
             this.eCToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.eCToolStripMenuItem.Name = "eCToolStripMenuItem";
-            this.eCToolStripMenuItem.Size = new System.Drawing.Size(88, 22);
+            this.eCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.eCToolStripMenuItem.Text = "EC";
             this.eCToolStripMenuItem.Click += new System.EventHandler(this.eCToolStripMenuItem_Click);
             this.eCToolStripMenuItem.MouseEnter += new System.EventHandler(this.eCToolStripMenuItem_MouseEnter);
