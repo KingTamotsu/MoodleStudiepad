@@ -6,7 +6,7 @@ using MoodleStudiepad.DAL;
 namespace MoodleStudiepad.CC {
     public class SeeStudentOverview {
         /// <summary>
-        /// This method requires a id of the user and send it to the Business Layer.
+        /// This method requires a user id and send it to the business layer.
         /// </summary>
         /// <param name="id">The id</param>
         /// <returns>Returns a single student object.</returns>
@@ -17,10 +17,10 @@ namespace MoodleStudiepad.CC {
         }
 
         /// <summary>
-        /// This method requires a id of the user and send it to the Business Layer.
+        /// This method requires a user id and send it to the business layer.
         /// </summary>
         /// <param name="id">The id</param>
-        /// <returns>Returns a list of Courses done by the student.</returns>
+        /// <returns>Returns a list of courses done by the student.</returns>
         public List<Course> courseByStudent(int id) {
             Course course = new Course();
             List<Course> coursesByStudent = course.coursesByStudent(id);

@@ -23,12 +23,11 @@ namespace MoodleStudiepad.DAL {
         }
 
         #region Get
-
         /// <summary>
-        /// This methods gets the single user from the database.
+        /// This methods gets a single user from the database.
         /// </summary>
         /// <param name="cmd">querystring</param>
-        /// <returns>Returns the single user object.</returns>
+        /// <returns>Returns a single user object.</returns>
         public UserAccount SelectSingleUser(SqlCommand cmd) {
             UserAccount userAccount = new UserAccount();
 
@@ -38,7 +37,6 @@ namespace MoodleStudiepad.DAL {
                 cmd.Connection = conn;
                 SqlDataReader reader = cmd.ExecuteReader();
                 DataTable schemaTable = reader.GetSchemaTable();
-
 
                 while (reader.Read()) {
                     foreach (DataRow row in schemaTable.Rows) {
@@ -61,14 +59,12 @@ namespace MoodleStudiepad.DAL {
         }
 
         /// <summary>
-        /// This method gets the single student from the database.
+        /// This method gets a single student from the database.
         /// </summary>
         /// <param name="cmd">querystring</param>
-        /// <returns>Returns the single student object.</returns>
+        /// <returns>Returns a single student object.</returns>
         public Student SelectSingleStudent(SqlCommand cmd) {
             Student student = new Student();
-
-
 
             try {
                 connectDB();
@@ -76,7 +72,6 @@ namespace MoodleStudiepad.DAL {
                 cmd.Connection = conn;
                 SqlDataReader reader = cmd.ExecuteReader();
                 DataTable schemaTable = reader.GetSchemaTable();
-
 
                 while (reader.Read()) {
                     foreach (DataRow row in schemaTable.Rows) {
@@ -98,10 +93,10 @@ namespace MoodleStudiepad.DAL {
         }
 
         /// <summary>
-        /// This method gets all the courses the user is subscribed to.
+        /// This method gets all the courses a user is subscribed to.
         /// </summary>
         /// <param name="cmd">querystring</param>
-        /// <returns>Returns a list of all the courses dat the user is subscribed to.</returns>
+        /// <returns>Returns a list of all the courses that a user is subscribed to.</returns>
         public List<Course> SelectCourseByStudentId(SqlCommand cmd) {
             Course course = new Course();
             List<Course> courseList = new List<Course>();
@@ -112,7 +107,6 @@ namespace MoodleStudiepad.DAL {
                 cmd.Connection = conn;
                 SqlDataReader reader = cmd.ExecuteReader();
                 DataTable schemaTable = reader.GetSchemaTable();
-
 
                 while (reader.Read()) {
                     foreach (DataRow row in schemaTable.Rows) {
@@ -139,7 +133,7 @@ namespace MoodleStudiepad.DAL {
         /// This method gets all the courses that exist in the database.
         /// </summary>
         /// <param name="cmd">querystring</param>
-        /// <returns>Returns a list of all the courses.</returns>
+        /// <returns>Returns a list of all the existing courses.</returns>
         public List<Course> SelectAllCourses(SqlCommand cmd) {
             Course course = new Course();
             List<Course> courseList = new List<Course>();
@@ -150,7 +144,6 @@ namespace MoodleStudiepad.DAL {
                 cmd.Connection = conn;
                 SqlDataReader reader = cmd.ExecuteReader();
                 DataTable schemaTable = reader.GetSchemaTable();
-
 
                 while (reader.Read()) {
                     foreach (DataRow row in schemaTable.Rows) {
@@ -163,7 +156,6 @@ namespace MoodleStudiepad.DAL {
                             blockPeriod = reader.GetInt32(reader.GetOrdinal("blockPeriod"))
                         };
                     }
-
                     courseList.Add(course);
                 }
             }
@@ -192,7 +184,6 @@ namespace MoodleStudiepad.DAL {
                 SqlDataReader reader = cmd.ExecuteReader();
                 DataTable schemaTable = reader.GetSchemaTable();
 
-
                 while (reader.Read())
                 {
                     foreach (DataRow row in schemaTable.Rows)
@@ -218,10 +209,10 @@ namespace MoodleStudiepad.DAL {
         }
 
         /// <summary>
-        /// This method gets all the grades from the prestation indicators.
+        /// This method gets all the average grades from the prestation indicators.
         /// </summary>
         /// <param name="cmd">querystring</param>
-        /// <returns>Returns a list of grades from the prestation indicators</returns>
+        /// <returns>Returns a list of grades from the prestation indicators.</returns>
         public List<PrestationIndicator> SelectAverageGrades(SqlCommand cmd)
         {
             PrestationIndicator prestationIndicator = new PrestationIndicator();
@@ -234,7 +225,6 @@ namespace MoodleStudiepad.DAL {
                 cmd.Connection = conn;
                 SqlDataReader reader = cmd.ExecuteReader();
                 DataTable schemaTable = reader.GetSchemaTable();
-
 
                 while (reader.Read())
                 {
@@ -264,7 +254,7 @@ namespace MoodleStudiepad.DAL {
         /// This method gets a list of courses the student is not subscribed to.
         /// </summary>
         /// <param name="cmd">querystring</param>
-        /// <returns>Returns a list of non subscribed courses.</returns>
+        /// <returns>Returns a list of non-subscribed courses.</returns>
         public List<Course> getNonSubscribedCourses(SqlCommand cmd) {
             Course course = new Course();
             List<Course> courseList = new List<Course>();
@@ -275,7 +265,6 @@ namespace MoodleStudiepad.DAL {
                 cmd.Connection = conn;
                 SqlDataReader reader = cmd.ExecuteReader();
                 DataTable schemaTable = reader.GetSchemaTable();
-
 
                 while (reader.Read()) {
                     foreach (DataRow row in schemaTable.Rows) {
@@ -298,12 +287,11 @@ namespace MoodleStudiepad.DAL {
             this.conn.Close();
             return courseList;
         }
-
         #endregion
 
         #region Add
         /// <summary>
-        /// This method is used to add something to the database. This doesnt matter what object it is.
+        /// This method is used to add something to the database. It is a universal sql-query: it can add anything that is supported in the database.
         /// </summary>
         /// <param name="cmd">querystring</param>
         /// <returns>Returns a bool wetter it succeed or not.</returns>
@@ -328,7 +316,6 @@ namespace MoodleStudiepad.DAL {
             conn.Close();
             return successfulEdit;
         }
-
         #endregion
 
         #region Update
@@ -336,7 +323,7 @@ namespace MoodleStudiepad.DAL {
         /// This method edits a course in the database.
         /// </summary>
         /// <param name="cmd">querystring</param>
-        /// <returns>Returns a bool wetter it succeed or not.</returns>
+        /// <returns>Returns a bool whether it succeed or not.</returns>
         public bool editCourse(SqlCommand cmd) {
 
             bool successfulEdit;
@@ -359,7 +346,6 @@ namespace MoodleStudiepad.DAL {
             conn.Close();
             return successfulEdit;
         }
-
         #endregion
     }
 }

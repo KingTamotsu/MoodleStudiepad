@@ -10,7 +10,7 @@ namespace MoodleStudiepad.CC
     public class SubscribeToNonSubscribedCourse
     {
         /// <summary>
-        /// This method requires a id of the user and send it to the Business Layer.
+        /// This method requires a user id and send it to the business layer.
         /// </summary>
         /// <param name="id">The id</param>
         /// <returns>Returns a list of courses that the user has not yet followed.</returns>
@@ -21,11 +21,11 @@ namespace MoodleStudiepad.CC
         }
 
         /// <summary>
-        /// This method requires a courseId and a studentId and send it to the Business Layer.
+        /// This method requires a course id and a student id and send it to the business layer.
         /// </summary>
         /// <param name="courseId">The course Id</param>
         /// <param name="studentId">The student Id</param>
-        /// <returns>Returns a bool wetter it succeed or not.</returns>
+        /// <returns>Returns a bool whether it succeeded or not.</returns>
         public bool subscribeToNonSubscribedCourse(int courseId, int studentId) {
             Course course = new Course();
             return course.subscribeToNonSubscribedCourse(courseId, studentId);

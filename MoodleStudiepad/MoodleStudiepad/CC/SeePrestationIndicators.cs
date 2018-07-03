@@ -10,10 +10,10 @@ namespace MoodleStudiepad.CC
     public class SeePrestationIndicators
     {
         /// <summary>
-        /// This method requires a id of the user and send it to the Business Layer.
+        /// This method requires a user id and send it to the business layer.
         /// </summary>
         /// <param name="id">The id</param>
-        /// <returns>Returns a list of prestation indicators objects.</returns>
+        /// <returns>Returns a list of prestation indicator objects.</returns>
         public List<PrestationIndicator> getPrestationIndicatorsById(int id)
         {
             PrestationIndicator prestationIndicator = new PrestationIndicator();
@@ -22,10 +22,10 @@ namespace MoodleStudiepad.CC
         }
 
         /// <summary>
-        /// This method requires a id of the user and send it to the Business Layer.
+        /// This method requires a user id and send it to the business layer.
         /// </summary>
         /// <param name="id">The id</param>
-        /// <returns>Returns a list of prestation indicators objects</returns>
+        /// <returns>Returns a list of prestation indicator objects</returns>
         public List<PrestationIndicator> getAverageGradeById(int id)
         {
             PrestationIndicator prestationIndicator = new PrestationIndicator();

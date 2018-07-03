@@ -8,21 +8,21 @@ namespace MoodleStudiepad.CC
     public class CheckUser {
 
         /// <summary>
-        /// This method requires a username and password and send it to the Business Layer.
+        /// This method requires a username and password and sends it to the business layer.
         /// </summary>
         /// <param name="username">The username</param>
         /// <param name="password">The password</param>
-        /// <returns>Returns a bool</returns>
+        /// <returns>Returns a bool.</returns>
         public bool checkUserOnLogin(string username, string password) {
             UserAccount userAccount = new UserAccount();
             return userAccount.checkUser(username, password);
         }
 
         /// <summary>
-        /// This method requires a username and send it to the Business Layer.
+        /// This method requires a username and sends it to the business layer.
         /// </summary>
         /// <param name="username">The username</param>
-        /// <returns>Returns a username of the user you gave in.</returns>
+        /// <returns>Returns a username of the selected user.</returns>
         public string returnUsername(string username) {
             UserAccount userAccount = new UserAccount();
             string user = userAccount.returnUsername(username);
@@ -30,10 +30,10 @@ namespace MoodleStudiepad.CC
         }
 
         /// <summary>
-        /// The method requires a username and send it to the Business Layer.
+        /// This method requires a username and sends it to the business layer.
         /// </summary>
         /// <param name="username">The username</param>
-        /// <returns>Returns the user id from the user you gave in.</returns>
+        /// <returns>Returns the user id from the selected user.</returns>
         public int returnUserId(string username) {
             UserAccount userAccount = new UserAccount();
             int userId = userAccount.returnUserId(username);
@@ -41,10 +41,10 @@ namespace MoodleStudiepad.CC
         }
 
         /// <summary>
-        /// This method requires a username and send it to the Business Layer.
+        /// This method requires a username and sends it to the business layer.
         /// </summary>
         /// <param name="username">The username</param>
-        /// <returns>Returns the roleId from the user you gave in.</returns>
+        /// <returns>Returns the role id from the selected user.</returns>
         public int returnRoleId(string username) {
             UserAccount userAccount = new UserAccount();
             int roleId = userAccount.returnRoleId(username);

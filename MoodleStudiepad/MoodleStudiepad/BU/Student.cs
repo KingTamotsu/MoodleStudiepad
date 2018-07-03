@@ -11,7 +11,7 @@ namespace MoodleStudiepad.BU {
         public DateTime birthDate;
 
         /// <summary>
-        /// This method requires a if of the user in order to get the user object from the database.
+        /// This method requires a user id in order to get a user object from the database.
         /// </summary>
         /// <param name="id">The id</param>
         /// <returns>Returns a student object.</returns>

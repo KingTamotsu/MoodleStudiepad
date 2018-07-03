@@ -16,10 +16,10 @@ namespace MoodleStudiepad.BU
         private bool successfulEdit;
 
         /// <summary>
-        /// This method requires a id of the user in order to get a list of courses that the student has completed.
+        /// This method requires a user id in order to get a list of courses that the student has completed.
         /// </summary>
         /// <param name="id">The id</param>
-        /// <returns>Returns the list of courses done by the student.</returns>
+        /// <returns>Returns the list of courses completed by the student.</returns>
         public List<Course> coursesByStudent(int id) {
             QueryStrings queryStrings = new QueryStrings();
             List<Course> coursesByStudent = queryStrings.getCouresesbyStudentId(id);
@@ -27,7 +27,7 @@ namespace MoodleStudiepad.BU
         }
 
          /// <summary>
-         /// This method gets all the courses that exist.
+         /// This method gets all existing courses.
          /// </summary>
          /// <returns>Returns a list of all courses.</returns>
         public List<Course> allCourses() {
@@ -37,7 +37,7 @@ namespace MoodleStudiepad.BU
         }
 
         /// <summary>
-        /// This method requires a id of the user and gets all courses that the user is not subscribed to.
+        /// This method requires a user id and gets all courses that the user is not subscribed to.
         /// </summary>
         /// <param name="id">The id</param>
         /// <returns>Returns a list of the courses that the user is not subscribed to.</returns>
@@ -48,10 +48,10 @@ namespace MoodleStudiepad.BU
         }
 
         /// <summary>
-        /// This method requires a course object to add it to the database.
+        /// This method requires a course object to add a course entry to the database.
         /// </summary>
         /// <param name="course">The course object</param>
-        /// <returns>Returns a bool wetter it succeed or not.</returns>
+        /// <returns>Returns a bool whether it succeeded or not.</returns>
         public bool addCourse(Course course) {
             QueryStrings queryStrings = new QueryStrings();
             string data = course.courseCode + "','" + course.name + "','" + course.schoolYear + "','" + course.blockPeriod + "','" + course.credits;
@@ -59,21 +59,21 @@ namespace MoodleStudiepad.BU
         }
 
         /// <summary>
-        /// This methods requires a course object to change it in the database.
+        /// This methods requires a course object to change a course entry in the database.
         /// </summary>
         /// <param name="course">The course object</param>
-        /// <returns>Returns a bool wetter it succeed or not.</returns>
+        /// <returns>Returns a bool whether it succeeded or not.</returns>
         public bool editCourse(Course course) {
             QueryStrings queryStrings = new QueryStrings();
             return successfulEdit = queryStrings.editCourse(course);
         }
 
         /// <summary>
-        /// This method requires a courseId and a studentId to add to the database.
+        /// This method requires a course id and a student id to add a subscription entry to the database.
         /// </summary>
         /// <param name="courseId">The courseId</param>
         /// <param name="studentId">The studentId</param>
-        /// <returns>Returns a bool wetter it succeed or not.</returns>
+        /// <returns>Returns a bool whether it succeeded or not.</returns>
         public bool subscribeToNonSubscribedCourse(int courseId, int studentId) {
             QueryStrings queryStrings = new QueryStrings();
             return queryStrings.addStudentToCourse(courseId, studentId);

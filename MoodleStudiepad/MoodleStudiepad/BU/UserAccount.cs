@@ -12,11 +12,11 @@ namespace MoodleStudiepad.BU
         public int roleId;
 
         /// <summary>
-        /// This method requires a username and password. Then the method checks wetter the data passed in is the same as in the database.
+        /// This method requires a username and password. The method then checks whether the given data is the same as in the database.
         /// </summary>
         /// <param name="username">The username</param>
         /// <param name="password">The password</param>
-        /// <returns>Returns a bool wetter the data is the same as the database.</returns>
+        /// <returns>Returns a bool whether the given data is the same as in the database.</returns>
         public bool checkUser(string username, string password) {
             QueryStrings queryStrings = new QueryStrings();
             UserAccount user = new UserAccount();
@@ -36,7 +36,7 @@ namespace MoodleStudiepad.BU
         }
 
         /// <summary>
-        /// This method requires a username in order to get the username of the user.
+        /// This method requires a username in order to get the username of that user.
         /// </summary>
         /// <param name="username">The username</param>
         /// <returns>Returns the username.</returns>
@@ -48,7 +48,7 @@ namespace MoodleStudiepad.BU
         }
 
         /// <summary>
-        /// This method requires a username in order to get the id of the user
+        /// This method requires a username in order to get the user id of that user
         /// </summary>
         /// <param name="username">The username</param>
         /// <returns>Returns the user id.</returns>
@@ -60,7 +60,7 @@ namespace MoodleStudiepad.BU
         }
 
         /// <summary>
-        /// This method requires a username in order to get the role id of the user.
+        /// This method requires a username in order to get the role id of that user.
         /// </summary>
         /// <param name="username">The username</param>
         /// <returns>Returns the role id.</returns>
