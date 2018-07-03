@@ -25,12 +25,5 @@ namespace MoodleStudiepad.BU {
             List<PrestationIndicator> gradeList = queryStrings.getAverageGradeById(id);
             return gradeList;
         }
-
-        //public Student getSingleStudent(int id)
-        //{
-        //    QueryStrings queryStrings = new QueryStrings();
-        //    Student singleStudent = queryStrings.getSingleStudentById(id);
-        //    return singleStudent;
-        //}
     }
 }

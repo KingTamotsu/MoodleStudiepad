@@ -4,15 +4,12 @@ using MoodleStudiepad.DAL;
 
 namespace MoodleStudiepad.BU {
     public class Student {
-        #region Properties
         public int id;
         public string firstName;
         public string lastName;
         public string email;
         public DateTime birthDate;
 
-
-        #endregion
 
         public Student() {
 

@@ -45,33 +45,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BU\Class.cs" />
     <Compile Include="BU\Course.cs" />
-    <Compile Include="BU\Employee.cs" />
     <Compile Include="BU\PrestationIndicator.cs" />
     <Compile Include="BU\Student.cs" />
     <Compile Include="BU\UserAccount.cs" />
     <Compile Include="CC\AddCourse.cs" />
     <Compile Include="CC\CheckUser.cs" />
     <Compile Include="CC\EditCourse.cs" />
-    <Compile Include="CC\EditStudent.cs" />
     <Compile Include="CC\SeeAllCourses.cs" />
     <Compile Include="CC\SubscribeToNonSubscribedCourse.cs" />
-    <Compile Include="CC\SeeContactDetailsStudent.cs" />
-    <Compile Include="CC\SeeCredits.cs" />
-    <Compile Include="CC\SendData.cs" />
-    <Compile Include="CC\SeeGrades.cs" />
-    <Compile Include="CC\SeeSubscribedCourseOverview.cs" />
     <Compile Include="CC\SeeStudentOverview.cs" />
-    <Compile Include="CC\SeePersonalData.cs" />
     <Compile Include="CC\SeePrestationIndicators.cs" />
-    <Compile Include="CC\EnterStudentGrades.cs" />
-    <Compile Include="CC\EditStudentGrades.cs" />
-    <Compile Include="CC\SeeSlber.cs" />
-    <Compile Include="CC\AddStudent.cs" />
-    <Compile Include="CC\SeeAssignedClasses.cs" />
-    <Compile Include="CC\UnsubscribeEducation.cs" />
-    <Compile Include="CC\SeePreviousCourse.cs" />
     <Compile Include="DAL\DBConnection.cs" />
     <Compile Include="DAL\QueryStrings.cs" />
     <Compile Include="Forms\Login.cs">

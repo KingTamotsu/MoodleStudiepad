@@ -9,13 +9,6 @@ namespace MoodleStudiepad.CC
 {
     class SeePrestationIndicators
     {
-        //public List<Course> allCourses()
-        //{
-        //    Course course = new Course();
-        //    List<Course> allCourses = course.allCourses();
-        //    return allCourses;
-        //}
-
         public List<PrestationIndicator> getPrestationIndicatorsById(int id)
         {
             PrestationIndicator prestationIndicator = new PrestationIndicator();
