@@ -13,6 +13,11 @@ namespace MoodleStudiepad.BU {
         public decimal grade;
         public decimal avgGrade;
 
+        /// <summary>
+        /// This method requires a id of the user in order to get all the prestation indicators of that user.
+        /// </summary>
+        /// <param name="id">The id</param>
+        /// <returns>Returns a list of all the prestation indicators of the user you gave in.</returns>
         public List<PrestationIndicator> getPrestationIndicatorsById(int id) {
             // return list of prestation indicators
             QueryStrings queryStrings = new QueryStrings();
@@ -20,6 +25,11 @@ namespace MoodleStudiepad.BU {
             return piList;
         }
 
+        /// <summary>
+        /// This methods requires a id of the user in orde to get all the grades of that user.
+        /// </summary>
+        /// <param name="id">The id</param>
+        /// <returns>Returns a list of all prestation indicators of the user you gave in.</returns>
         public List<PrestationIndicator> getAverageGradeById(int id) {
             QueryStrings queryStrings = new QueryStrings();
             List<PrestationIndicator> gradeList = queryStrings.getAverageGradeById(id);

@@ -10,22 +10,15 @@ namespace MoodleStudiepad.BU {
         public string email;
         public DateTime birthDate;
 
-
-        public Student() {
-
-        }
-
-        #region methods
-
-        public void register() {
-
-        }
-
+        /// <summary>
+        /// This method requires a if of the user in order to get the user object from the database.
+        /// </summary>
+        /// <param name="id">The id</param>
+        /// <returns>Returns a student object.</returns>
         public Student getSingleStudent(int id) {
             QueryStrings queryStrings = new QueryStrings();
             Student singleStudent = queryStrings.getSingleStudentById(id);
             return singleStudent;
         }
-        #endregion
     }
 }

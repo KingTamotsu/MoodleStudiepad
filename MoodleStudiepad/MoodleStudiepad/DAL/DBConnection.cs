@@ -10,6 +10,10 @@ namespace MoodleStudiepad.DAL {
     public class DBConnection {
         protected SqlConnection conn;
 
+        /// <summary>
+        /// This method is used to setup the connection string.
+        /// </summary>
+        /// <returns>The connection string.</returns>
         public SqlConnection connectDB() {
             string connectionString = @"Data Source=moodlestudiepad.database.windows.net;" +
                                    "Initial Catalog=MoodleStudiepad;" + "User id=moodleadmin;" +
@@ -20,6 +24,11 @@ namespace MoodleStudiepad.DAL {
 
         #region Get
 
+        /// <summary>
+        /// This methods gets the single user from the database.
+        /// </summary>
+        /// <param name="cmd">querystring</param>
+        /// <returns>Returns the single user object.</returns>
         public UserAccount SelectSingleUser(SqlCommand cmd) {
             UserAccount userAccount = new UserAccount();
 
@@ -51,6 +60,11 @@ namespace MoodleStudiepad.DAL {
             return userAccount;
         }
 
+        /// <summary>
+        /// This method gets the single student from the database.
+        /// </summary>
+        /// <param name="cmd">querystring</param>
+        /// <returns>Returns the single student object.</returns>
         public Student SelectSingleStudent(SqlCommand cmd) {
             Student student = new Student();
 
@@ -83,6 +97,11 @@ namespace MoodleStudiepad.DAL {
             return student;
         }
 
+        /// <summary>
+        /// This method gets all the courses the user is subscribed to.
+        /// </summary>
+        /// <param name="cmd">querystring</param>
+        /// <returns>Returns a list of all the courses dat the user is subscribed to.</returns>
         public List<Course> SelectCourseByStudentId(SqlCommand cmd) {
             Course course = new Course();
             List<Course> courseList = new List<Course>();
@@ -116,6 +135,11 @@ namespace MoodleStudiepad.DAL {
             return courseList;
         }
 
+        /// <summary>
+        /// This method gets all the courses that exist in the database.
+        /// </summary>
+        /// <param name="cmd">querystring</param>
+        /// <returns>Returns a list of all the courses.</returns>
         public List<Course> SelectAllCourses(SqlCommand cmd) {
             Course course = new Course();
             List<Course> courseList = new List<Course>();
@@ -150,6 +174,11 @@ namespace MoodleStudiepad.DAL {
             return courseList;
         }
 
+        /// <summary>
+        /// This method gets the prestation indicators from a single student.
+        /// </summary>
+        /// <param name="cmd">querystring</param>
+        /// <returns>Returns a list of prestation indicators.</returns>
         public List<PrestationIndicator> SelectPrestationIndicators(SqlCommand cmd)
         {
             PrestationIndicator prestationIndicator = new PrestationIndicator();
@@ -188,6 +217,11 @@ namespace MoodleStudiepad.DAL {
             return piList;
         }
 
+        /// <summary>
+        /// This method gets all the grades from the prestation indicators.
+        /// </summary>
+        /// <param name="cmd">querystring</param>
+        /// <returns>Returns a list of grades from the prestation indicators</returns>
         public List<PrestationIndicator> SelectAverageGrades(SqlCommand cmd)
         {
             PrestationIndicator prestationIndicator = new PrestationIndicator();
@@ -226,6 +260,11 @@ namespace MoodleStudiepad.DAL {
             return gradeList;
         }
 
+        /// <summary>
+        /// This method gets a list of courses the student is not subscribed to.
+        /// </summary>
+        /// <param name="cmd">querystring</param>
+        /// <returns>Returns a list of non subscribed courses.</returns>
         public List<Course> getNonSubscribedCourses(SqlCommand cmd) {
             Course course = new Course();
             List<Course> courseList = new List<Course>();
@@ -263,7 +302,11 @@ namespace MoodleStudiepad.DAL {
         #endregion
 
         #region Add
-        //Dit word maar 1 method genaamt execute die je kunt gebruiken voor alle classes om objecten toe te voegen.
+        /// <summary>
+        /// This method is used to add something to the database. This doesnt matter what object it is.
+        /// </summary>
+        /// <param name="cmd">querystring</param>
+        /// <returns>Returns a bool wetter it succeed or not.</returns>
         public bool execute(SqlCommand cmd) {
             bool successfulEdit;
 
@@ -289,7 +332,11 @@ namespace MoodleStudiepad.DAL {
         #endregion
 
         #region Update
-
+        /// <summary>
+        /// This method edits a course in the database.
+        /// </summary>
+        /// <param name="cmd">querystring</param>
+        /// <returns>Returns a bool wetter it succeed or not.</returns>
         public bool editCourse(SqlCommand cmd) {
 
             bool successfulEdit;
@@ -314,10 +361,5 @@ namespace MoodleStudiepad.DAL {
         }
 
         #endregion
-
-        #region Delete
-
-        #endregion
-
     }
 }

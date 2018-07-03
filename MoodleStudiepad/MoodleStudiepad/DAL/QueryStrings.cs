@@ -19,7 +19,7 @@ namespace MoodleStudiepad.DAL {
             return readerList;
         }
 
-        public Student getSingleStudentById( int id) {
+        public Student getSingleStudentById(int id) {
             Student readerList = dbConnection.SelectSingleStudent(new SqlCommand(
                 "SELECT stu.*, cou.courseCode, cou.name FROM Student stu, Course cou INNER JOIN StudentCourse sc1 ON studentId = sc1.studentId WHERE stu.studentId = sc1.studentId AND cou.courseId = sc1.courseId AND stu.studentId = " + id + " Order BY stu.studentId;"));
             return readerList;
@@ -35,7 +35,6 @@ namespace MoodleStudiepad.DAL {
             return readerList;
         }
 
-        // Get pi by student id
         public List<PrestationIndicator> getPrestationIndicatorsById(int id)
         {
             List<PrestationIndicator> readerList = dbConnection.SelectPrestationIndicators(new SqlCommand("SELECT stu.studentId, cou.courseId, pre.piCode, pre.grade FROM Student stu, Course cou, PrestationIndicator pre INNER JOIN StudentCourse sc1 ON sc1.studentId = sc1.studentId WHERE stu.studentId = sc1.studentId AND cou.courseId = sc1.courseId AND stu.studentId = " + id + " AND stu.studentId = pre.studentId AND cou.courseId = pre.courseId ORDER BY stu.studentId;"));
@@ -52,15 +51,6 @@ namespace MoodleStudiepad.DAL {
             List<Course> readerList = dbConnection.getNonSubscribedCourses(new SqlCommand("SELECT DISTINCT cou.* FROM Course cou, Student stu INNER JOIN StudentCourse sco ON stu.studentId = sco.studentId WHERE cou.courseId NOT IN (SELECT cou.courseId FROM Course cou INNER JOIN StudentCourse sco ON cou.courseId = sco.courseId WHERE sco.studentId = " + id + ")"));
             return readerList;
         }
-
-        // Get avg. grade by student id
-        // SELECT stu.studentId, stu.firstName, stu.lastName, pre.courseId, cou.name, (SUM(pre.grade*pre.weight)/SUM(pre.weight))AS avgGrade FROM Student stu, Course cou, PrestationIndicator pre WHERE stu.studentId = pre.studentId AND cou.courseId = pre.courseId AND stu.studentId = '2' GROUP BY stu.studentId, stu.firstName, stu.lastName, cou.name, pre.courseId ORDER BY pre.courseId
-
-        // Get past courses
-        // SELECT stu.studentId, stu.firstName, stu.lastName, cou.courseCode, cou.name FROM Student stu, Course cou, PreviousCourse pco INNER JOIN StudentCourse sc1 ON sc1.studentId = sc1.studentId WHERE stu.studentId = sc1.studentId AND cou.courseId = sc1.courseId AND stu.studentId = '2' AND stu.studentId = pco.studentId AND cou.courseId = pco.courseId ORDER BY stu.studentId;
-
-        // Get passed courses
-        // SELECT stu.studentId, stu.firstName, stu.lastName, cou.courseCode, cou.name, pco.passed FROM Student stu, Course cou, PreviousCourse pco INNER JOIN StudentCourse sc1 ON sc1.studentId = sc1.studentId WHERE stu.studentId = sc1.studentId AND cou.courseId = sc1.courseId AND stu.studentId = '2' AND stu.studentId = pco.studentId AND cou.courseId = pco.courseId ORDER BY stu.studentId;
 
         #endregion
 
